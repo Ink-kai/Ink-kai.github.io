@@ -25,10 +25,6 @@ identifier = "about"
 name = "关于"
 url = "/about/"
 weight = 4
-[[Params.links]]
-name = "常用开发工具CDN镜像"
-title = "常用开发工具CDN镜像"
-url = "http://mirrors.flysnow.org/"
 # 图片cdn
 [Params.image_cdn]
 Host = "https://cdn.jsdelivr.net/gh/user/user.github.io"
