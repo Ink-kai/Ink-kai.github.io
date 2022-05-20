@@ -1,4 +1,4 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://ink-kai.github.io/'
 disableKinds = true
 languageCode = 'zh-cn'
 theme = "maupassant"
