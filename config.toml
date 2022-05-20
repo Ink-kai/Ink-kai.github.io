@@ -34,6 +34,8 @@ name = "InkCat"
 [Params]
 date = "2022/05/20"
 fancybox = true
+# 超链接新窗口打开
+hrefblack = true
 localSearch = true
 subtitle = "要么活,要么死"
 # 开启目录
