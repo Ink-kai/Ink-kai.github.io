@@ -42,3 +42,13 @@ toc = true
 cdnJsSite = "cdn.bootcdn.net"
 # 支持Disqus评论
 disqusShortname = "InkCat"
+# 知识版权
+[Params.cc]
+link = "https://github.com/Ink-kai/Ink-kai.github.io/"
+name = "知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议"
+## 配置 utteranc评论,教程参考 https://utteranc.es/
+[params.utteranc]
+enable = false 
+issueTerm = "title" 
+repo = "Ink-kai/Ink-kai.github.io/" ##换成自己得
+theme = "github-light"
