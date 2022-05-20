@@ -1,7 +1,6 @@
 baseURL = 'http://example.org/'
 disableKinds = true
 languageCode = 'zh-cn'
-# publishDir = "Ink-kai.github.io"
 theme = "maupassant"
 title = 'InkCat博客'
 # GA分析统计
