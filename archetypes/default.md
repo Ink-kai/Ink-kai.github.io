@@ -5,4 +5,6 @@ categories=[]
 date="{{ .Date }}"
 draft=true
 hiddenFromHomePage= false
+lastmod: 
+    
 ---
