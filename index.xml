@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>InkCat博客</title><link>http://example.org/</link><description>Recent content on InkCat博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 20 May 2022 22:31:07 +0800</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml"/><item><title>个人收藏夹中的资源</title><link>http://example.org/posts/websiteresources/</link><pubDate>Fri, 20 May 2022 22:31:07 +0800</pubDate><guid>http://example.org/posts/websiteresources/</guid><description>文档查阅 Vue.js
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>InkCat博客</title><link>https://ink-kai.github.io/</link><description>Recent content on InkCat博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 20 May 2022 22:31:07 +0800</lastBuildDate><atom:link href="https://ink-kai.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>个人收藏夹中的资源</title><link>https://ink-kai.github.io/posts/websiteresources/</link><pubDate>Fri, 20 May 2022 22:31:07 +0800</pubDate><guid>https://ink-kai.github.io/posts/websiteresources/</guid><description>文档查阅 Vue.js
 地鼠文档
 Vue3 文档
 OSGeo 中文分会
@@ -16,7 +16,7 @@ Go 语言标准库文档中文版 | Go 语言中文网 | Golang 中文社区 | G
 大佬 阮一峰的个人网站 - Ruan YiFeng's Personal Website
 骏马金龙
 阿西河前端教程丨一个助你成为全栈开发的公益网站
-线上环境 CodePen: Build, Test, and Discover Front-end Code.</description></item><item><title>Hugo搭建博客</title><link>http://example.org/posts/20220520/</link><pubDate>Fri, 20 May 2022 14:20:28 +0800</pubDate><guid>http://example.org/posts/20220520/</guid><description>1.下载 hugo release 下载页面
+线上环境 CodePen: Build, Test, and Discover Front-end Code.</description></item><item><title>Hugo搭建博客</title><link>https://ink-kai.github.io/posts/20220520/</link><pubDate>Fri, 20 May 2022 14:20:28 +0800</pubDate><guid>https://ink-kai.github.io/posts/20220520/</guid><description>1.下载 hugo release 下载页面
 可选 32 或 64 下载 压缩包解压后，将 hugo.exe 所在目录添加到环境变量 PATH中 cmd 终端中执行hugo version，出现版本号即安装成功 2.BlogSite 当前目录建立 Blog 目录
 hugo new site Blog 为 Blog 添加主题(个人使用 maupassant 主题)
 官方主题 进入 Blog 目录
