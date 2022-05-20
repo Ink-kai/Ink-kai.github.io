@@ -1,4 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>InkCat博客</title><link>https://ink-kai.github.io/</link><description>Recent content on InkCat博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 20 May 2022 22:31:07 +0800</lastBuildDate><atom:link href="https://ink-kai.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>个人收藏夹中的资源</title><link>https://ink-kai.github.io/posts/websiteresources/</link><pubDate>Fri, 20 May 2022 22:31:07 +0800</pubDate><guid>https://ink-kai.github.io/posts/websiteresources/</guid><description>文档查阅 Vue.js
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>InkCat博客</title>
+    <link>https://ink-kai.github.io/</link>
+    <description>Recent content on InkCat博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 20 May 2022 22:31:07 +0800</lastBuildDate><atom:link href="https://ink-kai.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>个人收藏夹中的资源</title>
+      <link>https://ink-kai.github.io/posts/websiteresources/</link>
+      <pubDate>Fri, 20 May 2022 22:31:07 +0800</pubDate>
+      
+      <guid>https://ink-kai.github.io/posts/websiteresources/</guid>
+      <description>文档查阅 Vue.js
 地鼠文档
 Vue3 文档
 OSGeo 中文分会
@@ -13,13 +28,65 @@ Linux 命令大全(手册) – 真正好用的 Linux 命令在线查询网站
 Ansible 中文权威指南- 国内最专业的 Ansible 中文官方学习手册
 JavaScript 标准参考教程（alpha） &amp;ndash; JavaScript 标准参考教程（alpha）
 Go 语言标准库文档中文版 | Go 语言中文网 | Golang 中文社区 | Golang 中国
-大佬 阮一峰的个人网站 - Ruan YiFeng's Personal Website
+大佬 阮一峰的个人网站 - Ruan YiFeng&#39;s Personal Website
 骏马金龙
 阿西河前端教程丨一个助你成为全栈开发的公益网站
-线上环境 CodePen: Build, Test, and Discover Front-end Code.</description></item><item><title>Hugo搭建博客</title><link>https://ink-kai.github.io/posts/20220520/</link><pubDate>Fri, 20 May 2022 14:20:28 +0800</pubDate><guid>https://ink-kai.github.io/posts/20220520/</guid><description>1.下载 hugo release 下载页面
-可选 32 或 64 下载 压缩包解压后，将 hugo.exe 所在目录添加到环境变量 PATH中 cmd 终端中执行hugo version，出现版本号即安装成功 2.BlogSite 当前目录建立 Blog 目录
+线上环境 CodePen: Build, Test, and Discover Front-end Code.</description>
+    </item>
+    
+    <item>
+      <title>归档</title>
+      <link>https://ink-kai.github.io/archives/</link>
+      <pubDate>Fri, 20 May 2022 21:49:45 +0800</pubDate>
+      
+      <guid>https://ink-kai.github.io/archives/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>搜索</title>
+      <link>https://ink-kai.github.io/search/</link>
+      <pubDate>Fri, 20 May 2022 21:46:43 +0800</pubDate>
+      
+      <guid>https://ink-kai.github.io/search/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>分类</title>
+      <link>https://ink-kai.github.io/category/</link>
+      <pubDate>Fri, 20 May 2022 21:46:35 +0800</pubDate>
+      
+      <guid>https://ink-kai.github.io/category/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>关于本站</title>
+      <link>https://ink-kai.github.io/about/</link>
+      <pubDate>Fri, 20 May 2022 20:10:27 +0800</pubDate>
+      
+      <guid>https://ink-kai.github.io/about/</guid>
+      <description>建站初心 今天是 2022/05/20，正好是 520，可惜与我无缘。 我临时起意想着通过博客记录下自己的成长历程，生活的点点滴滴、工作中的忙忙碌碌使用越来越焦灼了。如果我每天闲的时候可以在电脑上敲着键盘记录我的一天总好过刷视频、做一些无聊的事情度日要好很多。可能我并非美玉，可是不打磨我连成为瓦砾的资格都没有，寻求改变就在今日，我还是那句话：要么活，要么死1
+关于我 一位仍在沪飘的非开发、非管理工作的底层工作者，我是从事管理类工作，为什么说非管理呢，严格来说，我经验不够，只能算打杂的。 本人业余从事程序开发（go/linux/js），喜欢浏览各大优秀博客网站，学习别人的知识，由于英语短板，文档阅读能力很弱，但是比较有耐心 如果有需要可以联系ink_kai@163.com
+  原处取自《肖申克的救赎》中的“要么忙着活，要么忙着死”。&amp;#160;&amp;#x21a9;&amp;#xfe0e;
+   </description>
+    </item>
+    
+    <item>
+      <title>Hugo搭建博客</title>
+      <link>https://ink-kai.github.io/posts/20220520/</link>
+      <pubDate>Fri, 20 May 2022 14:20:28 +0800</pubDate>
+      
+      <guid>https://ink-kai.github.io/posts/20220520/</guid>
+      <description>1.下载 hugo release 下载页面
+可选 32 或 64 下载  压缩包解压后，将 hugo.exe 所在目录添加到环境变量 PATH中 cmd 终端中执行hugo version，出现版本号即安装成功  2.BlogSite  当前目录建立 Blog 目录
 hugo new site Blog 为 Blog 添加主题(个人使用 maupassant 主题)
 官方主题 进入 Blog 目录
-git clone https://github.com/flysnow-org/maupassant-hugo.git themes\maupassant Blog\config.toml 文件中添加 maupassant 主题配置 theme=maupassant 发布文章(此命令会创建 home.md 文件到 Blog/content/posts 目录中)
+git clone https://github.com/flysnow-org/maupassant-hugo.git themes\maupassant Blog\config.toml 文件中添加 maupassant 主题配置 theme=maupassant  发布文章(此命令会创建 home.md 文件到 Blog/content/posts 目录中)
 hugo new posts/home.md 启动 Blog 站点
-hugo server 3.github + picgo （图床配置） 本人使用 vscode 开发 markdown，图片粘贴上传很不方便，因此使用 github+picgo 作为图片存储</description></item></channel></rss>
+hugo server  3.github + picgo （图床配置） 本人使用 vscode 开发 markdown，图片粘贴上传很不方便，因此使用 github+picgo 作为图片存储</description>
+    </item>
+    
+  </channel>
+</rss>

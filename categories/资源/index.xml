@@ -1,4 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>资源 on InkCat博客</title><link>https://ink-kai.github.io/categories/%E8%B5%84%E6%BA%90/</link><description>Recent content in 资源 on InkCat博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 20 May 2022 22:31:07 +0800</lastBuildDate><atom:link href="https://ink-kai.github.io/categories/%E8%B5%84%E6%BA%90/index.xml" rel="self" type="application/rss+xml"/><item><title>个人收藏夹中的资源</title><link>https://ink-kai.github.io/posts/websiteresources/</link><pubDate>Fri, 20 May 2022 22:31:07 +0800</pubDate><guid>https://ink-kai.github.io/posts/websiteresources/</guid><description>文档查阅 Vue.js
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>资源 on InkCat博客</title>
+    <link>https://ink-kai.github.io/categories/%E8%B5%84%E6%BA%90/</link>
+    <description>Recent content in 资源 on InkCat博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 20 May 2022 22:31:07 +0800</lastBuildDate><atom:link href="https://ink-kai.github.io/categories/%E8%B5%84%E6%BA%90/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>个人收藏夹中的资源</title>
+      <link>https://ink-kai.github.io/posts/websiteresources/</link>
+      <pubDate>Fri, 20 May 2022 22:31:07 +0800</pubDate>
+      
+      <guid>https://ink-kai.github.io/posts/websiteresources/</guid>
+      <description>文档查阅 Vue.js
 地鼠文档
 Vue3 文档
 OSGeo 中文分会
@@ -13,7 +28,11 @@ Linux 命令大全(手册) – 真正好用的 Linux 命令在线查询网站
 Ansible 中文权威指南- 国内最专业的 Ansible 中文官方学习手册
 JavaScript 标准参考教程（alpha） &amp;ndash; JavaScript 标准参考教程（alpha）
 Go 语言标准库文档中文版 | Go 语言中文网 | Golang 中文社区 | Golang 中国
-大佬 阮一峰的个人网站 - Ruan YiFeng's Personal Website
+大佬 阮一峰的个人网站 - Ruan YiFeng&#39;s Personal Website
 骏马金龙
 阿西河前端教程丨一个助你成为全栈开发的公益网站
-线上环境 CodePen: Build, Test, and Discover Front-end Code.</description></item></channel></rss>
+线上环境 CodePen: Build, Test, and Discover Front-end Code.</description>
+    </item>
+    
+  </channel>
+</rss>

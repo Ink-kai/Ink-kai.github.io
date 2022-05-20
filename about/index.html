@@ -7,21 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
 
-    <title>日常 | InkCat博客</title>
-    <meta property="og:title" content="日常 - InkCat博客">
+    <title>关于本站 | InkCat博客</title>
+    <meta property="og:title" content="关于本站 - InkCat博客">
     <meta property="og:type" content="article">
         
+    <meta property="article:published_time" content='2022-05-20T20:10:27&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2022-05-20T20:10:27&#43;08:00'>
         
     <meta name="Keywords" content="">
-    <meta name="description" content="日常">
+    <meta name="description" content="about">
         
     <meta name="author" content="InkCat">
-    <meta property="og:url" content="https://ink-kai.github.io/categories/%E6%97%A5%E5%B8%B8/">
+    <meta property="og:url" content="https://ink-kai.github.io/about/">
     <link rel="shortcut icon" href='/favicon.ico'  type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
     <link rel="stylesheet" href='/css/style.css'>
-    <link rel="alternate" type="application/rss+xml" href="https://ink-kai.github.io/categories/%E6%97%A5%E5%B8%B8/index.xml" title="InkCat博客" />
     <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     
@@ -54,7 +57,7 @@
                     
                     <a  href="https://ink-kai.github.io/archives/" title="归档">归档</a>
                     
-                    <a  href="https://ink-kai.github.io/about/" title="关于">关于</a>
+                    <a class="current" href="https://ink-kai.github.io/about/" title="关于">关于</a>
                     
                 </nav>
             </div>
@@ -69,50 +72,157 @@
                 <div class="col-8" id="main">
                     
 <div class="res-cons">
-    
-    <h3 class="archive-title">
-        分类
-        <span class="keyword">日常</span>
-        中的文章
-    </h3>
-    
+    <style type="text/css">
+    .post-toc {
+        position: fixed;
+        width: 200px;
+        margin-left: -210px;
+        padding: 5px 10px;
+        font-family: Athelas, STHeiti, Microsoft Yahei, serif;
+        font-size: 12px;
+        border: 1px solid rgba(0, 0, 0, .07);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.98);
+        background-clip: padding-box;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        word-wrap: break-word;
+        white-space: nowrap;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        z-index: 999;
+        cursor: pointer;
+        max-height: 70%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
 
-    
+    .post-toc .post-toc-title {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .post-toc .post-toc-content {
+        font-size: 15px;
+    }
+
+    .post-toc .post-toc-content>nav>ul {
+        margin: 10px 0;
+    }
+
+    .post-toc .post-toc-content ul {
+        padding-left: 20px;
+        list-style: square;
+        margin: 0.5em;
+        line-height: 1.8em;
+    }
+
+    .post-toc .post-toc-content ul ul {
+        padding-left: 15px;
+        display: none;
+    }
+
+    @media print,
+    screen and (max-width:1057px) {
+        .post-toc {
+            display: none;
+        }
+    }
+</style>
+<div class="post-toc" style="position: absolute; top: 188px;">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#建站初心">建站初心</a></li>
+    <li><a href="#关于我">关于我</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var postToc = $(".post-toc");
+        if (postToc.length) {
+            var leftPos = $("#main").offset().left;
+            if (leftPos < 220) {
+                postToc.css({ "width": leftPos - 10, "margin-left": (0 - leftPos) })
+            }
+
+            var t = postToc.offset().top - 20,
+                a = {
+                    start: {
+                        position: "absolute",
+                        top: t
+                    },
+                    process: {
+                        position: "fixed",
+                        top: 20
+                    },
+                };
+            $(window).scroll(function () {
+                var e = $(window).scrollTop();
+                e < t ? postToc.css(a.start) : postToc.css(a.process)
+            })
+        }
+
+        if ($("#TableOfContents").children().length < 1) {
+            $(".post-toc").remove();
+        }
+    })
+</script>
     <article class="post">
         <header>
-            <h1 class="post-title">
-                <a href="https://ink-kai.github.io/posts/20220520/">Hugo搭建博客</a>
-            </h1>
+            <h1 class="post-title">关于本站</h1>
         </header>
         <date class="post-meta meta-date">
             2022年5月20日
         </date>
         
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='/categories/%E6%97%A5%E5%B8%B8'>日常</a>
-            
-        </div>
+        
         
         <div class="post-content">
-            1.下载 hugo release 下载页面
-可选 32 或 64 下载  压缩包解压后，将 hugo.exe 所在目录添加到环境变量 PATH中 cmd 终端中执行hugo version，出现版本号即安装成功  2.BlogSite  当前目录建立 Blog 目录
-hugo new site Blog 为 Blog 添加主题(个人使用 maupassant 主题)
-官方主题 进入 Blog 目录
-git clone https://github.com/flysnow-org/maupassant-hugo.git themes\maupassant Blog\config.toml 文件中添加 maupassant 主题配置 theme=maupassant  发布文章(此命令会创建 home.md 文件到 Blog/content/posts 目录中)
-hugo new posts/home.md 启动 Blog 站点
-hugo server  3.github + picgo （图床配置） 本人使用 vscode 开发 markdown，图片粘贴上传很不方便，因此使用 github+picgo 作为图片存储……
-            <p class="readmore"><a href="https://ink-kai.github.io/posts/20220520/">阅读全文</a></p>
+            <h2 id="建站初心">建站初心</h2>
+<p>今天是 2022/05/20，正好是 520，可惜与我无缘。
+我临时起意想着通过博客记录下自己的成长历程，生活的点点滴滴、工作中的忙忙碌碌使用越来越焦灼了。如果我每天闲的时候可以在电脑上敲着键盘记录我的一天总好过刷视频、做一些无聊的事情度日要好很多。可能我并非美玉，可是不打磨我连成为瓦砾的资格都没有，寻求改变就在今日，我还是那句话：要么活，要么死<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<h2 id="关于我">关于我</h2>
+<p>一位仍在沪飘的非开发、非管理工作的底层工作者，我是从事管理类工作，为什么说非管理呢，严格来说，我经验不够，只能算打杂的。
+本人业余从事程序开发（go/linux/js），喜欢浏览各大优秀博客网站，学习别人的知识，由于英语短板，文档阅读能力很弱，但是比较有耐心
+如果有需要可以联系ink_<a href="mailto:kai@163.com">kai@163.com</a></p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><strong>原处取自《肖申克的救赎》中的“要么忙着活，要么忙着死”。</strong>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+        </div>
+
+        
+
+
+        
+
+
+        <div class="post-meta meta-tags">
+            
+            没有标签
+            
         </div>
     </article>
     
-
     
 
-
-
-
+    
+    
+    
+    
 
 </div>
 
@@ -136,6 +246,17 @@ hugo server  3.github + picgo （图床配置） 本人使用 vscode 开发 mark
 </footer>
 
 
+    
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='//cdn.bootcdn.net/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script><script src="//cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 
 <a id="rocket" href="#top"></a>
 <script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>

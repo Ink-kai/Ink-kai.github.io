@@ -1,1 +1,38 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tags on InkCat博客</title><link>https://ink-kai.github.io/tags/</link><description>Recent content in Tags on InkCat博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 20 May 2022 22:31:07 +0800</lastBuildDate><atom:link href="https://ink-kai.github.io/tags/index.xml" rel="self" type="application/rss+xml"/><item><title>Chrome</title><link>https://ink-kai.github.io/tags/chrome/</link><pubDate>Fri, 20 May 2022 22:31:07 +0800</pubDate><guid>https://ink-kai.github.io/tags/chrome/</guid><description/></item><item><title>浏览器收藏夹</title><link>https://ink-kai.github.io/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%94%B6%E8%97%8F%E5%A4%B9/</link><pubDate>Fri, 20 May 2022 22:31:07 +0800</pubDate><guid>https://ink-kai.github.io/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%94%B6%E8%97%8F%E5%A4%B9/</guid><description/></item><item><title>博客</title><link>https://ink-kai.github.io/tags/%E5%8D%9A%E5%AE%A2/</link><pubDate>Fri, 20 May 2022 14:20:28 +0800</pubDate><guid>https://ink-kai.github.io/tags/%E5%8D%9A%E5%AE%A2/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on InkCat博客</title>
+    <link>https://ink-kai.github.io/tags/</link>
+    <description>Recent content in Tags on InkCat博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 20 May 2022 22:31:07 +0800</lastBuildDate><atom:link href="https://ink-kai.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chrome</title>
+      <link>https://ink-kai.github.io/tags/chrome/</link>
+      <pubDate>Fri, 20 May 2022 22:31:07 +0800</pubDate>
+      
+      <guid>https://ink-kai.github.io/tags/chrome/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>浏览器收藏夹</title>
+      <link>https://ink-kai.github.io/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%94%B6%E8%97%8F%E5%A4%B9/</link>
+      <pubDate>Fri, 20 May 2022 22:31:07 +0800</pubDate>
+      
+      <guid>https://ink-kai.github.io/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%94%B6%E8%97%8F%E5%A4%B9/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>博客</title>
+      <link>https://ink-kai.github.io/tags/%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Fri, 20 May 2022 14:20:28 +0800</pubDate>
+      
+      <guid>https://ink-kai.github.io/tags/%E5%8D%9A%E5%AE%A2/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
