@@ -1,0 +1,49 @@
+baseURL = 'http://example.org/'
+disableKinds = true
+languageCode = 'zh-cn'
+publishDir = "Ink-kai.github.io"
+theme = "maupassant"
+title = 'InkCat博客'
+# GA分析统计
+googleAnalytics = "GA ID"
+[markup]
+[markup.highlight]
+lineNos = true
+style = "github"
+[menu]
+[[menu.main]]
+identifier = "categories"
+name = "分类"
+url = "/categories/"
+weight = 2
+[[menu.main]]
+identifier = "archives"
+name = "归档"
+url = "/archives/"
+weight = 3
+[[menu.main]]
+identifier = "about"
+name = "关于"
+url = "/about/"
+weight = 4
+[[Params.links]]
+name = "常用开发工具CDN镜像"
+title = "常用开发工具CDN镜像"
+url = "http://mirrors.flysnow.org/"
+# 图片cdn
+[Params.image_cdn]
+Host = "https://cdn.jsdelivr.net/gh/user/user.github.io"
+enable = true
+[Author]
+name = "InkCat"
+[Params]
+date = "2022/05/20"
+fancybox = true
+localSearch = true
+subtitle = "要么活,要么死"
+# 开启目录
+toc = true
+# 默认：cdnjs.cloudflare.com
+cdnJsSite = "cdn.bootcdn.net"
+# 支持Disqus评论
+disqusShortname = "InkCat"
