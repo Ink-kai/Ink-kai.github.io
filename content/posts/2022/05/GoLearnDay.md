@@ -7,7 +7,7 @@ categories:
     - 技术
     - go
 date: '2022-05-21T23:31:18+08:00'
-draft: true
+draft: false
 # 支持在首页上隐藏某篇文章
 hiddenFromHomePage: false
 ---

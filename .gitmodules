@@ -1,3 +1,9 @@
 [submodule "themes/InkCat"]
 	path = themes/InkCat
 	url = https://github.com/Ink-kai/Blog-DefaultTheme.git
+[submodule "theme/blogtheme"]
+	path = theme/blogtheme
+	url = https://github.com/Ink-kai/BlogTheme.git
+[submodule "themes/blogtheme"]
+	path = themes/blogtheme
+	url = https://github.com/Ink-kai/BlogTheme.git
