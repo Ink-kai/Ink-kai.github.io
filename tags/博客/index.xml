@@ -9,10 +9,10 @@
     <lastBuildDate>Fri, 20 May 2022 14:20:28 +0800</lastBuildDate><atom:link href="https://ink-kai.github.io/tags/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo搭建博客</title>
-      <link>https://ink-kai.github.io/posts/20220520/</link>
+      <link>https://ink-kai.github.io/posts/2022/05/bloginit/</link>
       <pubDate>Fri, 20 May 2022 14:20:28 +0800</pubDate>
       
-      <guid>https://ink-kai.github.io/posts/20220520/</guid>
+      <guid>https://ink-kai.github.io/posts/2022/05/bloginit/</guid>
       <description>1.下载 hugo release 下载页面
 可选 32 或 64 下载  压缩包解压后，将 hugo.exe 所在目录添加到环境变量 PATH中 cmd 终端中执行hugo version，出现版本号即安装成功  2.BlogSite  当前目录建立 Blog 目录
 hugo new site Blog 为 Blog 添加主题(个人使用 maupassant 主题)
