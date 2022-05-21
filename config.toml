@@ -36,6 +36,8 @@ date = "2022/05/20"
 fancybox = true
 # 超链接新窗口打开
 hrefblack = true
+# 图片加载失败启用CDN 
+ImageCDN = true
 localSearch = true
 subtitle = "要么活,要么死"
 # 开启目录

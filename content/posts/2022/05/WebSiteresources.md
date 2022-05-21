@@ -8,10 +8,8 @@ author: '作者'
 lastmod: 2015-04-06
 draft: false
 categories:
-    - 技术
     - 资源
 tags:
-    - 浏览器收藏夹
     - Chrome
 prev: /posts/websiteresources/
 ---
