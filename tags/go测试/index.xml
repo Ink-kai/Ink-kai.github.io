@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>go测试 on InkCat博客</title>
+    <link>https://ink-kai.github.io/tags/go%E6%B5%8B%E8%AF%95/</link>
+    <description>Recent content in go测试 on InkCat博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 21 May 2022 23:31:18 +0800</lastBuildDate><atom:link href="https://ink-kai.github.io/tags/go%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go测试Testing</title>
+      <link>https://ink-kai.github.io/posts/2022/05/golearnday/</link>
+      <pubDate>Sat, 21 May 2022 23:31:18 +0800</pubDate>
+      
+      <guid>https://ink-kai.github.io/posts/2022/05/golearnday/</guid>
+      <description>本文着重讲解些关于 Testing 框架的理论
+1.测试规范 在 go 语言中编写一个测试用例，需要满足以下条件:
+ 文件必须是 xxx_test.go 命名 测试函数必须是 大写 Test 开头 函数只有一个参数：t *testing.T  2.关于 Testing 框架 前面简单讲了一下怎么编写测试用例，现在主要讲下 Testing 的用法。
+  测试用例有几种形式？四种
+// 基本测试用例 TestXxxx(t *testing.T) // 压力测试的测试用例 BenchmarkXxxx(b *testing.B) // 测试控制台输出的例子 Example_Xxx() // 测试 Main 函数 TestMain(m *testing.M)   关于 T 类型（单元测试）    关于 B 类型（基准/压力测试）    关于 Example 测试    3.测试用例写法   单元测试
+求和需要实现 Sum 函数，并对其编写测试用例。</description>
+    </item>
+    
+  </channel>
+</rss>

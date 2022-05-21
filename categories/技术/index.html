@@ -4,20 +4,22 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-     <title>404 Page not found | InkCat博客</title>
-    <meta property="og:title" content="404 Page not found - InkCat博客" />
+     <title>技术 | InkCat博客</title>
+    <meta property="og:title" content="技术 - InkCat博客" />
     <meta property="og:type" content="article" />
      
     <meta name="Keywords" content="" />
-    <meta name="description" content="404 Page not found" />
+    <meta name="description" content="技术" />
     
     <meta name="author" content="InkCat" />
-    <meta property="og:url" content="https://ink-kai.github.io/404.html" />
+    <meta property="og:url" content="https://ink-kai.github.io/categories/%E6%8A%80%E6%9C%AF/" />
     <link rel="shortcut icon" href='/favicon.ico' type="image/x-icon" />
 
     <link rel="stylesheet" href='/css/normalize.css' />
     <link rel="stylesheet" href='/css/style.css' />
-    <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <link rel="alternate" type="application/rss+xml" href="https://ink-kai.github.io/categories/%E6%8A%80%E6%9C%AF/index.xml" title="InkCat博客" />
+     <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
      
     <link href="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet" />
@@ -66,20 +68,53 @@
 
                 <div class="col-8" id="main">
                     
-<div class="body404">
-    <div class="info404">
-        <header id="header404" class="clearfix">
-            <div class="site-name404"><i>404</i></div>
-        </header>
-        <section>
-            <div class="title404">
-                <p>每一个平凡的日常<br />都是连续发生中的奇迹</p>
-            </div>
-            
+<div class="res-cons">
+    
+    <h3 class="archive-title">
+        分类
+        <span class="keyword">技术</span>
+        中的文章
+    </h3>
+    
 
-            <a rel="nofollow" href="https://ink-kai.github.io/" class="index404">回首页看看</a>
-        </section>
-    </div>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://ink-kai.github.io/posts/2022/05/golearnday/">Go测试Testing</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2022年5月21日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='/categories/%E6%8A%80%E6%9C%AF'>技术</a>
+            
+            <a href='/categories/go'>go</a>
+            
+        </div>
+        
+        <div class="post-content">
+            本文着重讲解些关于 Testing 框架的理论
+1.测试规范 在 go 语言中编写一个测试用例，需要满足以下条件:
+ 文件必须是 xxx_test.go 命名 测试函数必须是 大写 Test 开头 函数只有一个参数：t *testing.T  2.关于 Testing 框架 前面简单讲了一下怎么编写测试用例，现在主要讲下 Testing 的用法。
+  测试用例有几种形式？四种
+// 基本测试用例 TestXxxx(t *testing.T) // 压力测试的测试用例 BenchmarkXxxx(b *testing.B) // 测试控制台输出的例子 Example_Xxx() // 测试 Main 函数 TestMain(m *testing.M)   关于 T 类型（单元测试）    关于 B 类型（基准/压力测试）    关于 Example 测试    3.测试用例写法   单元测试
+求和需要实现 Sum 函数，并对其编写测试用例。……
+            <p class="readmore"><a href="https://ink-kai.github.io/posts/2022/05/golearnday/">阅读全文</a></p>
+        </div>
+    </article>
+    
+
+    
+
+
+
+
+
 </div>
 
                     <footer id="footer">

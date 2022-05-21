@@ -6,7 +6,25 @@
     <description>Recent content in Categories on InkCat博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 20 May 2022 22:31:07 +0800</lastBuildDate><atom:link href="https://ink-kai.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 21 May 2022 23:31:18 +0800</lastBuildDate><atom:link href="https://ink-kai.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>go</title>
+      <link>https://ink-kai.github.io/categories/go/</link>
+      <pubDate>Sat, 21 May 2022 23:31:18 +0800</pubDate>
+      
+      <guid>https://ink-kai.github.io/categories/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>技术</title>
+      <link>https://ink-kai.github.io/categories/%E6%8A%80%E6%9C%AF/</link>
+      <pubDate>Sat, 21 May 2022 23:31:18 +0800</pubDate>
+      
+      <guid>https://ink-kai.github.io/categories/%E6%8A%80%E6%9C%AF/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>资源</title>
       <link>https://ink-kai.github.io/categories/%E8%B5%84%E6%BA%90/</link>

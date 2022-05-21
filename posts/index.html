@@ -74,6 +74,38 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://ink-kai.github.io/posts/2022/05/golearnday/" title="Go测试Testing">Go测试Testing</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2022年5月21日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='/categories/%E6%8A%80%E6%9C%AF'>技术</a></span>
+            
+            <span class="meta-category"><a href='/categories/go'>go</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            本文着重讲解些关于 Testing 框架的理论
+1.测试规范 在 go 语言中编写一个测试用例，需要满足以下条件:
+ 文件必须是 xxx_test.go 命名 测试函数必须是 大写 Test 开头 函数只有一个参数：t *testing.T  2.关于 Testing 框架 前面简单讲了一下怎么编写测试用例，现在主要讲下 Testing 的用法。
+  测试用例有几种形式？四种
+// 基本测试用例 TestXxxx(t *testing.T) // 压力测试的测试用例 BenchmarkXxxx(b *testing.B) // 测试控制台输出的例子 Example_Xxx() // 测试 Main 函数 TestMain(m *testing.M)   关于 T 类型（单元测试）    关于 B 类型（基准/压力测试）    关于 Example 测试    3.测试用例写法   单元测试
+求和需要实现 Sum 函数，并对其编写测试用例。……
+        </div>
+        <p class="readmore"><a href="https://ink-kai.github.io/posts/2022/05/golearnday/">阅读全文</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://ink-kai.github.io/posts/2022/05/websiteresources/" title="个人收藏夹中的资源">个人收藏夹中的资源</a>
             </h1>
         </header>
@@ -206,6 +238,10 @@ hugo server  3.github + picgo （图床配置） 本人使用 vscode 开发 mark
 <ul class="widget-list">
     
     <li>
+        <a href="https://ink-kai.github.io/posts/2022/05/golearnday/" title="Go测试Testing">Go测试Testing</a>
+    </li>
+    
+    <li>
         <a href="https://ink-kai.github.io/posts/2022/05/websiteresources/" title="个人收藏夹中的资源">个人收藏夹中的资源</a>
     </li>
     
@@ -222,6 +258,10 @@ hugo server  3.github + picgo （图床配置） 本人使用 vscode 开发 mark
         <h3 class="widget-title"><a href='/categories/'>分类</a></h3>
 <ul class="widget-list">
     
+    <li><a href="https://ink-kai.github.io/categories/go/">go (1)</a></li>
+    
+    <li><a href="https://ink-kai.github.io/categories/%E6%8A%80%E6%9C%AF/">技术 (1)</a></li>
+    
     <li><a href="https://ink-kai.github.io/categories/%E6%97%A5%E5%B8%B8/">日常 (1)</a></li>
     
     <li><a href="https://ink-kai.github.io/categories/%E8%B5%84%E6%BA%90/">资源 (1)</a></li>
@@ -234,6 +274,8 @@ hugo server  3.github + picgo （图床配置） 本人使用 vscode 开发 mark
 <div class="tagcloud">
     
     <a href="https://ink-kai.github.io/tags/chrome/">Chrome</a>
+    
+    <a href="https://ink-kai.github.io/tags/go%E6%B5%8B%E8%AF%95/">go测试</a>
     
     <a href="https://ink-kai.github.io/tags/%E5%8D%9A%E5%AE%A2/">博客</a>
     
