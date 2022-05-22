@@ -3,6 +3,8 @@ languageCode = 'zh-cn'
 summaryLength = 140
 theme = "blogtheme"
 title = 'InkCat博客'
+[Author]
+name = "InkCat"
 # GA分析统计
 googleAnalytics = "GA ID"
 [markup]
@@ -16,7 +18,8 @@ lineNumbersInTable = false
 noClasses = true
 tabWidth = 4
 # 样式参考：https://xyproto.github.io/splash/docs/all.html
-style = "monokai"
+# 推荐  igor，monokailight，emacs，pastie，tango
+style = "igor"
 [menu]
 [[menu.main]]
 identifier = "categories"
@@ -61,4 +64,4 @@ name = "知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协�
 enable = true 
 issueTerm = "title" 
 repo = "Ink-kai/Ink-kai.github.io" ##换成自己得
-theme = "github-light"
+theme = "boxy-light"
