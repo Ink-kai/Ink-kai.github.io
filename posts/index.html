@@ -4,8 +4,6 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
-    <meta name="referrer" content="no-referrer-when-downgrade" />
      <title>Posts | InkCat博客</title>
     <meta property="og:title" content="Posts - InkCat博客" />
     <meta property="og:type" content="article" />
@@ -13,7 +11,7 @@
     <meta name="Keywords" content="" />
     <meta name="description" content="Posts" />
     
-    <meta name="author" content="" />
+    <meta name="author" content="InkCat" />
     <meta property="og:url" content="https://ink-kai.github.io/posts/" />
     <link rel="shortcut icon" href='/favicon.ico' type="image/x-icon" />
 
@@ -26,10 +24,12 @@
      
     <link href="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet" />
     
+    
+    
+    <script type="text/javascript" src='/js/hrefblank.js'></script>
+    
 
     
-    
-    <link rel="stylesheet" href='/css/copy-to-clipboard.css' />
     
 </head>
 
@@ -95,11 +95,8 @@
 1.测试规范 在 go 语言中编写一个测试用例，需要满足以下条件:
  文件必须是 xxx_test.go 命名 测试函数必须是 大写 Test 开头 函数只有一个参数：t *testing.T  2.关于 Testing 框架 前面简单讲了一下怎么编写测试用例，现在主要讲下 Testing 的用法。
   测试用例有几种形式？四种
-1// 基本测试用例 2TestXxxx(t *testing.T) 3// 压力测试的测试用例 4BenchmarkXxxx(b *testing.B) 5// 测试控制台输出的例子 6Example_Xxx() 7// 测试 Main 函数 8TestMain(m *testing.M)   关于 T 类型（单元测试）    关于 B 类型（基准/压力测试）    关于 Example 测试    3.测试用例写法   单元测试
-求和需要实现 Sum 函数，并对其编写测试用例。
-创建 sum.go 文件，代码如下：
-1package array 2func Sum(numbers int) int { 3 sum := 0 4 for i := 0; i &lt;= numbers; i++ { 5 sum += i 6 } 7 return sum 8} 再创建 sum_test.go 文件，代码如下：
-1package array 2 3import ( 4 &#34;reflect&#34; 5 &#34;testing&#34; 6) 7 8func TestSum(t *testing.T) { 9 t.Run(&#34;collection of any size&#34;, func(t *testing.T) { 10 num := 10 11 got := Sum(num) 12 want := 55 13 if got !……
+// 基本测试用例 TestXxxx(t *testing.T) // 压力测试的测试用例 BenchmarkXxxx(b *testing.B) // 测试控制台输出的例子 Example_Xxx() // 测试 Main 函数 TestMain(m *testing.M)   关于 T 类型（单元测试）    关于 B 类型（基准/压力测试）    关于 Example 测试    3.测试用例写法   单元测试
+求和需要实现 Sum 函数，并对其编写测试用例。……
         </div>
         <p class="readmore"><a href="https://ink-kai.github.io/posts/2022/05/golearnday/">阅读全文</a></p>
     </article>
@@ -142,23 +139,7 @@ Go 语言标准库文档中文版 | Go 语言中文网 | Golang 中文社区 | G
 大佬 阮一峰的个人网站 - Ruan YiFeng's Personal Website
 骏马金龙
 阿西河前端教程丨一个助你成为全栈开发的公益网站
-线上环境 CodePen: Build, Test, and Discover Front-end Code.
-CDN BootCDN - Bootstrap 中文网开源项目免费 CDN 加速服务
-社区 绿叶学习网-给你初恋般的感觉~
-SegmentFault 思否
-LearnKu 终身编程者的知识社区
-娱乐&amp;资源 Learn Touch Typing Free - TypingClub
-自由钢琴 AutoPiano - 最美在线钢琴应用
-优选资源 - 编程导航
-doyoudo
-高清壁纸 4K 壁纸4K 图片_4K 高清壁纸下载_4K,5K,6K,7K,8K 壁纸图片素材彼岸图网 4K 壁纸4K 图片_4K 高清壁纸下载_4K,5K,6K,7K,8K 壁纸图片素材彼岸图网
-动态壁纸桌面壁纸图片电脑桌面壁纸图片_4K 高清壁纸-元气壁纸
-HD/4K/5K Resolution Wallpapers/Backgrounds ▪ Wallroom.io
-极简壁纸海量电脑桌面壁纸美图_4K 超高清最潮壁纸网站
-Wallpaper Abyss - 高清壁纸, 桌面背景
-未分类 Z-Library single sign on
-维基百科，自由的百科全书
-考试酷(examcoo)-永久免费的电子作业与在线考试系统云平台……
+线上环境 CodePen: Build, Test, and Discover Front-end Code.……
         </div>
         <p class="readmore"><a href="https://ink-kai.github.io/posts/2022/05/websiteresources/">阅读全文</a></p>
     </article>
@@ -187,12 +168,9 @@ Wallpaper Abyss - 高清壁纸, 桌面背景
 可选 32 或 64 下载  压缩包解压后，将 hugo.exe 所在目录添加到环境变量 PATH中 cmd 终端中执行hugo version，出现版本号即安装成功  2.BlogSite  当前目录建立 Blog 目录
 hugo new site Blog 为 Blog 添加主题(个人使用 maupassant 主题)
 官方主题 进入 Blog 目录
-git clone https://github.com/flysnow-org/maupassant-hugo.git themes\maupassant Blog\config.toml 文件中添加 maupassant 主题配置 1theme=maupassant  发布文章(此命令会创建 home.md 文件到 Blog/content/posts 目录中)
+git clone https://github.com/flysnow-org/maupassant-hugo.git themes\maupassant Blog\config.toml 文件中添加 maupassant 主题配置 theme=maupassant  发布文章(此命令会创建 home.md 文件到 Blog/content/posts 目录中)
 hugo new posts/home.md 启动 Blog 站点
-hugo server  3.github + picgo （图床配置） 本人使用 vscode 开发 markdown，图片粘贴上传很不方便，因此使用 github+picgo 作为图片存储
-github 新建 public 仓库 xxx 生成 Token 地址
-vscdoe 安装 picgo 插件   4.使用 picgo 上传图片 win 电脑在 vscode 界面下有两个快捷键（大小写不敏感）
- Ctrl+Alt+u 上传剪贴板图片并在光标处粘贴图片链接 Ctrl+Alt+e 打开资源管理器选择图片上传  ……
+hugo server  3.github + picgo （图床配置） 本人使用 vscode 开发 markdown，图片粘贴上传很不方便，因此使用 github+picgo 作为图片存储……
         </div>
         <p class="readmore"><a href="https://ink-kai.github.io/posts/2022/05/bloginit/">阅读全文</a></p>
     </article>
@@ -209,7 +187,7 @@ vscdoe 安装 picgo 插件   4.使用 picgo 上传图片 win 电脑在 vscode �
                     <footer id="footer">
     <div>
         &copy; 2022
-        <a href="https://ink-kai.github.io/">InkCat博客 By </a>
+        <a href="https://ink-kai.github.io/">InkCat博客 By InkCat</a>
         
     </div>
     <br />
@@ -223,7 +201,7 @@ vscdoe 安装 picgo 插件   4.使用 picgo 上传图片 win 电脑在 vscode �
         <div class="github-badge">
             <a href="https://ink-kai.github.io/" target="_black">
                 <span class="badge-subject">Design by</span>
-                <span class="badge-value bg-brightgreen"></span>
+                <span class="badge-value bg-brightgreen">InkCat</span>
             </a>
         </div>
         <div class="github-badge">
@@ -239,14 +217,8 @@ vscdoe 安装 picgo 插件   4.使用 picgo 上传图片 win 电脑在 vscode �
 
 <a id="rocket" href="#top"></a>
 <script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
-<script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
 
 
-
-
-<script src='/js/copy-to-clipboard.js'></script>
-
-<script src='/js/hrefblank.js'></script>
 
 
                 </div>
@@ -303,7 +275,7 @@ vscdoe 安装 picgo 插件   4.使用 picgo 上传图片 win 电脑在 vscode �
     
     <a href="https://ink-kai.github.io/tags/chrome/">Chrome</a>
     
-    <a href="https://ink-kai.github.io/tags/go%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/">go单元测试</a>
+    <a href="https://ink-kai.github.io/tags/go%E6%B5%8B%E8%AF%95/">go测试</a>
     
     <a href="https://ink-kai.github.io/tags/%E5%8D%9A%E5%AE%A2/">博客</a>
     
@@ -312,9 +284,8 @@ vscdoe 安装 picgo 插件   4.使用 picgo 上传图片 win 电脑在 vscode �
 
     
 
-
     <section class="widget">
-        
+        <h3 class="widget-title">其它</h3>
         <ul class="widget-list">
             <li><a href="https://ink-kai.github.io/index.xml">文章 RSS</a></li>
         </ul>

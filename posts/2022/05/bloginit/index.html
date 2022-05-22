@@ -4,8 +4,6 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
-    <meta name="referrer" content="no-referrer-when-downgrade" />
      <title>Hugo搭建博客 | InkCat博客</title>
     <meta property="og:title" content="Hugo搭建博客 - InkCat博客" />
     <meta property="og:type" content="article" />
@@ -28,10 +26,12 @@
      
     <link href="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet" />
     
+    
+    
+    <script type="text/javascript" src='/js/hrefblank.js'></script>
+    
 
     
-    
-    <link rel="stylesheet" href='/css/copy-to-clipboard.css' />
     
 </head>
 
@@ -196,12 +196,6 @@
         </div>
         
         
-        <div class="post-meta">
-            <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
-                    阅读</span></span>
-                    |<span class="post-date">共88字</span>，阅读约<span class="more-meta"> 1 分钟</span>
-        </div>
-        
         
         <div class="post-content">
             <h2 id="1下载-hugo">1.下载 hugo</h2>
@@ -228,8 +222,8 @@ cmd 终端中执行<code>hugo version</code>，出现版本号即安装成功
 <li><strong>进入 Blog 目录</strong><br>
 <code>git clone https://github.com/flysnow-org/maupassant-hugo.git themes\maupassant</code></li>
 <li><strong>Blog\config.toml 文件中添加 maupassant 主题配置</strong>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>theme=maupassant
-</span></span></code></pre></div></li>
+<pre tabindex="0"><code>theme=maupassant
+</code></pre></li>
 <li><strong>发布文章</strong>(此命令会创建 home.md 文件到 Blog/content/posts 目录中)<br>
 <code>hugo new posts/home.md</code></li>
 <li><strong>启动 Blog 站点</strong><br>
@@ -257,7 +251,7 @@ cmd 终端中执行<code>hugo version</code>，出现版本号即安装成功
         
 <div class="post-archive">
     <ul class="post-copyright">
-        <li><strong>原文作者：</strong><a rel="author" href="https://ink-kai.github.io/">InkCat博客</a></li>
+        <li><strong>原文作者：</strong><a rel="author" href="https://ink-kai.github.io/">InkCat</a></li>
         <li style="word-break:break-all"><strong>原文链接：</strong><a href="https://ink-kai.github.io/posts/2022/05/bloginit/">https://ink-kai.github.io/posts/2022/05/bloginit/</a></li>
         <li><strong>版权声明：</strong>本作品采用<a rel="license" href="http://www.bjdcmm.org.cn/node/1494">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可，非商业转载请注明出处（作者，原文链接），商业转载请联系作者获得授权。</li>
     </ul>
@@ -267,7 +261,6 @@ cmd 终端中执行<code>hugo version</code>，出现版本号即安装成功
 
 
         
-
 
 
         <div class="post-meta meta-tags">
@@ -296,7 +289,7 @@ cmd 终端中执行<code>hugo version</code>，出现版本号即安装成功
                     <footer id="footer">
     <div>
         &copy; 2022
-        <a href="https://ink-kai.github.io/">InkCat博客 By </a>
+        <a href="https://ink-kai.github.io/">InkCat博客 By InkCat</a>
         
     </div>
     <br />
@@ -310,7 +303,7 @@ cmd 终端中执行<code>hugo version</code>，出现版本号即安装成功
         <div class="github-badge">
             <a href="https://ink-kai.github.io/" target="_black">
                 <span class="badge-subject">Design by</span>
-                <span class="badge-value bg-brightgreen"></span>
+                <span class="badge-value bg-brightgreen">InkCat</span>
             </a>
         </div>
         <div class="github-badge">
@@ -336,14 +329,8 @@ cmd 终端中执行<code>hugo version</code>，出现版本号即安装成功
 
 <a id="rocket" href="#top"></a>
 <script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
-<script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
 
 
-
-
-<script src='/js/copy-to-clipboard.js'></script>
-
-<script src='/js/hrefblank.js'></script>
 
 
                 </div>
@@ -400,7 +387,7 @@ cmd 终端中执行<code>hugo version</code>，出现版本号即安装成功
     
     <a href="https://ink-kai.github.io/tags/chrome/">Chrome</a>
     
-    <a href="https://ink-kai.github.io/tags/go%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/">go单元测试</a>
+    <a href="https://ink-kai.github.io/tags/go%E6%B5%8B%E8%AF%95/">go测试</a>
     
     <a href="https://ink-kai.github.io/tags/%E5%8D%9A%E5%AE%A2/">博客</a>
     
@@ -409,9 +396,8 @@ cmd 终端中执行<code>hugo version</code>，出现版本号即安装成功
 
     
 
-
     <section class="widget">
-        
+        <h3 class="widget-title">其它</h3>
         <ul class="widget-list">
             <li><a href="https://ink-kai.github.io/index.xml">文章 RSS</a></li>
         </ul>

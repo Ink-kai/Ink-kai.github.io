@@ -4,8 +4,6 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
-    <meta name="referrer" content="no-referrer-when-downgrade" />
      <title>博客 | InkCat博客</title>
     <meta property="og:title" content="博客 - InkCat博客" />
     <meta property="og:type" content="article" />
@@ -13,7 +11,7 @@
     <meta name="Keywords" content="" />
     <meta name="description" content="博客" />
     
-    <meta name="author" content="" />
+    <meta name="author" content="InkCat" />
     <meta property="og:url" content="https://ink-kai.github.io/tags/%E5%8D%9A%E5%AE%A2/" />
     <link rel="shortcut icon" href='/favicon.ico' type="image/x-icon" />
 
@@ -26,10 +24,12 @@
      
     <link href="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet" />
     
+    
+    
+    <script type="text/javascript" src='/js/hrefblank.js'></script>
+    
 
     
-    
-    <link rel="stylesheet" href='/css/copy-to-clipboard.css' />
     
 </head>
 
@@ -100,12 +100,9 @@
 可选 32 或 64 下载  压缩包解压后，将 hugo.exe 所在目录添加到环境变量 PATH中 cmd 终端中执行hugo version，出现版本号即安装成功  2.BlogSite  当前目录建立 Blog 目录
 hugo new site Blog 为 Blog 添加主题(个人使用 maupassant 主题)
 官方主题 进入 Blog 目录
-git clone https://github.com/flysnow-org/maupassant-hugo.git themes\maupassant Blog\config.toml 文件中添加 maupassant 主题配置 1theme=maupassant  发布文章(此命令会创建 home.md 文件到 Blog/content/posts 目录中)
+git clone https://github.com/flysnow-org/maupassant-hugo.git themes\maupassant Blog\config.toml 文件中添加 maupassant 主题配置 theme=maupassant  发布文章(此命令会创建 home.md 文件到 Blog/content/posts 目录中)
 hugo new posts/home.md 启动 Blog 站点
-hugo server  3.github + picgo （图床配置） 本人使用 vscode 开发 markdown，图片粘贴上传很不方便，因此使用 github+picgo 作为图片存储
-github 新建 public 仓库 xxx 生成 Token 地址
-vscdoe 安装 picgo 插件   4.使用 picgo 上传图片 win 电脑在 vscode 界面下有两个快捷键（大小写不敏感）
- Ctrl+Alt+u 上传剪贴板图片并在光标处粘贴图片链接 Ctrl+Alt+e 打开资源管理器选择图片上传  ……
+hugo server  3.github + picgo （图床配置） 本人使用 vscode 开发 markdown，图片粘贴上传很不方便，因此使用 github+picgo 作为图片存储……
             <p class="readmore"><a href="https://ink-kai.github.io/posts/2022/05/bloginit/">阅读全文</a></p>
         </div>
     </article>
@@ -122,7 +119,7 @@ vscdoe 安装 picgo 插件   4.使用 picgo 上传图片 win 电脑在 vscode �
                     <footer id="footer">
     <div>
         &copy; 2022
-        <a href="https://ink-kai.github.io/">InkCat博客 By </a>
+        <a href="https://ink-kai.github.io/">InkCat博客 By InkCat</a>
         
     </div>
     <br />
@@ -136,7 +133,7 @@ vscdoe 安装 picgo 插件   4.使用 picgo 上传图片 win 电脑在 vscode �
         <div class="github-badge">
             <a href="https://ink-kai.github.io/" target="_black">
                 <span class="badge-subject">Design by</span>
-                <span class="badge-value bg-brightgreen"></span>
+                <span class="badge-value bg-brightgreen">InkCat</span>
             </a>
         </div>
         <div class="github-badge">
@@ -152,14 +149,8 @@ vscdoe 安装 picgo 插件   4.使用 picgo 上传图片 win 电脑在 vscode �
 
 <a id="rocket" href="#top"></a>
 <script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
-<script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
 
 
-
-
-<script src='/js/copy-to-clipboard.js'></script>
-
-<script src='/js/hrefblank.js'></script>
 
 
                 </div>
@@ -216,7 +207,7 @@ vscdoe 安装 picgo 插件   4.使用 picgo 上传图片 win 电脑在 vscode �
     
     <a href="https://ink-kai.github.io/tags/chrome/">Chrome</a>
     
-    <a href="https://ink-kai.github.io/tags/go%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/">go单元测试</a>
+    <a href="https://ink-kai.github.io/tags/go%E6%B5%8B%E8%AF%95/">go测试</a>
     
     <a href="https://ink-kai.github.io/tags/%E5%8D%9A%E5%AE%A2/">博客</a>
     
@@ -225,9 +216,8 @@ vscdoe 安装 picgo 插件   4.使用 picgo 上传图片 win 电脑在 vscode �
 
     
 
-
     <section class="widget">
-        
+        <h3 class="widget-title">其它</h3>
         <ul class="widget-list">
             <li><a href="https://ink-kai.github.io/index.xml">文章 RSS</a></li>
         </ul>
