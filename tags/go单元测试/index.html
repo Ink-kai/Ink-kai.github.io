@@ -4,32 +4,32 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-     <title>go测试 | InkCat博客</title>
-    <meta property="og:title" content="go测试 - InkCat博客" />
+    
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+     <title>go单元测试 | InkCat博客</title>
+    <meta property="og:title" content="go单元测试 - InkCat博客" />
     <meta property="og:type" content="article" />
      
     <meta name="Keywords" content="" />
-    <meta name="description" content="go测试" />
+    <meta name="description" content="go单元测试" />
     
-    <meta name="author" content="InkCat" />
-    <meta property="og:url" content="https://ink-kai.github.io/tags/go%E6%B5%8B%E8%AF%95/" />
+    <meta name="author" content="" />
+    <meta property="og:url" content="https://ink-kai.github.io/tags/go%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/" />
     <link rel="shortcut icon" href='/favicon.ico' type="image/x-icon" />
 
     <link rel="stylesheet" href='/css/normalize.css' />
     <link rel="stylesheet" href='/css/style.css' />
     
-    <link rel="alternate" type="application/rss+xml" href="https://ink-kai.github.io/tags/go%E6%B5%8B%E8%AF%95/index.xml" title="InkCat博客" />
+    <link rel="alternate" type="application/rss+xml" href="https://ink-kai.github.io/tags/go%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/index.xml" title="InkCat博客" />
      <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
      
     <link href="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet" />
     
-    
-    
-    <script type="text/javascript" src='/js/hrefblank.js'></script>
-    
 
     
+    
+    <link rel="stylesheet" href='/css/copy-to-clipboard.css' />
     
 </head>
 
@@ -72,7 +72,7 @@
     
     <h3 class="archive-title">
         包含标签
-        <span class="keyword">go测试</span>
+        <span class="keyword">go单元测试</span>
         的文章
     </h3>
     
@@ -102,8 +102,11 @@
 1.测试规范 在 go 语言中编写一个测试用例，需要满足以下条件:
  文件必须是 xxx_test.go 命名 测试函数必须是 大写 Test 开头 函数只有一个参数：t *testing.T  2.关于 Testing 框架 前面简单讲了一下怎么编写测试用例，现在主要讲下 Testing 的用法。
   测试用例有几种形式？四种
-// 基本测试用例 TestXxxx(t *testing.T) // 压力测试的测试用例 BenchmarkXxxx(b *testing.B) // 测试控制台输出的例子 Example_Xxx() // 测试 Main 函数 TestMain(m *testing.M)   关于 T 类型（单元测试）    关于 B 类型（基准/压力测试）    关于 Example 测试    3.测试用例写法   单元测试
-求和需要实现 Sum 函数，并对其编写测试用例。……
+1// 基本测试用例 2TestXxxx(t *testing.T) 3// 压力测试的测试用例 4BenchmarkXxxx(b *testing.B) 5// 测试控制台输出的例子 6Example_Xxx() 7// 测试 Main 函数 8TestMain(m *testing.M)   关于 T 类型（单元测试）    关于 B 类型（基准/压力测试）    关于 Example 测试    3.测试用例写法   单元测试
+求和需要实现 Sum 函数，并对其编写测试用例。
+创建 sum.go 文件，代码如下：
+1package array 2func Sum(numbers int) int { 3 sum := 0 4 for i := 0; i &lt;= numbers; i++ { 5 sum += i 6 } 7 return sum 8} 再创建 sum_test.go 文件，代码如下：
+1package array 2 3import ( 4 &#34;reflect&#34; 5 &#34;testing&#34; 6) 7 8func TestSum(t *testing.T) { 9 t.Run(&#34;collection of any size&#34;, func(t *testing.T) { 10 num := 10 11 got := Sum(num) 12 want := 55 13 if got !……
             <p class="readmore"><a href="https://ink-kai.github.io/posts/2022/05/golearnday/">阅读全文</a></p>
         </div>
     </article>
@@ -120,7 +123,7 @@
                     <footer id="footer">
     <div>
         &copy; 2022
-        <a href="https://ink-kai.github.io/">InkCat博客 By InkCat</a>
+        <a href="https://ink-kai.github.io/">InkCat博客 By </a>
         
     </div>
     <br />
@@ -134,7 +137,7 @@
         <div class="github-badge">
             <a href="https://ink-kai.github.io/" target="_black">
                 <span class="badge-subject">Design by</span>
-                <span class="badge-value bg-brightgreen">InkCat</span>
+                <span class="badge-value bg-brightgreen"></span>
             </a>
         </div>
         <div class="github-badge">
@@ -150,8 +153,14 @@
 
 <a id="rocket" href="#top"></a>
 <script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+<script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
 
 
+
+
+<script src='/js/copy-to-clipboard.js'></script>
+
+<script src='/js/hrefblank.js'></script>
 
 
                 </div>
@@ -208,7 +217,7 @@
     
     <a href="https://ink-kai.github.io/tags/chrome/">Chrome</a>
     
-    <a href="https://ink-kai.github.io/tags/go%E6%B5%8B%E8%AF%95/">go测试</a>
+    <a href="https://ink-kai.github.io/tags/go%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/">go单元测试</a>
     
     <a href="https://ink-kai.github.io/tags/%E5%8D%9A%E5%AE%A2/">博客</a>
     
@@ -217,8 +226,9 @@
 
     
 
+
     <section class="widget">
-        <h3 class="widget-title">其它</h3>
+        
         <ul class="widget-list">
             <li><a href="https://ink-kai.github.io/index.xml">文章 RSS</a></li>
         </ul>

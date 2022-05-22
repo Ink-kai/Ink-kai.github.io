@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>技术 on InkCat博客</title>
-    <link>https://ink-kai.github.io/categories/%E6%8A%80%E6%9C%AF/</link>
-    <description>Recent content in 技术 on InkCat博客</description>
+    <title>go单元测试 on InkCat博客</title>
+    <link>https://ink-kai.github.io/tags/go%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/</link>
+    <description>Recent content in go单元测试 on InkCat博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 21 May 2022 23:31:18 +0800</lastBuildDate><atom:link href="https://ink-kai.github.io/categories/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 21 May 2022 23:31:18 +0800</lastBuildDate><atom:link href="https://ink-kai.github.io/tags/go%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Go测试Testing</title>
       <link>https://ink-kai.github.io/posts/2022/05/golearnday/</link>

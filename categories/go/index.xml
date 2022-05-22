@@ -17,8 +17,11 @@
 1.测试规范 在 go 语言中编写一个测试用例，需要满足以下条件:
  文件必须是 xxx_test.go 命名 测试函数必须是 大写 Test 开头 函数只有一个参数：t *testing.T  2.关于 Testing 框架 前面简单讲了一下怎么编写测试用例，现在主要讲下 Testing 的用法。
   测试用例有几种形式？四种
-// 基本测试用例 TestXxxx(t *testing.T) // 压力测试的测试用例 BenchmarkXxxx(b *testing.B) // 测试控制台输出的例子 Example_Xxx() // 测试 Main 函数 TestMain(m *testing.M)   关于 T 类型（单元测试）    关于 B 类型（基准/压力测试）    关于 Example 测试    3.测试用例写法   单元测试
-求和需要实现 Sum 函数，并对其编写测试用例。</description>
+1// 基本测试用例 2TestXxxx(t *testing.T) 3// 压力测试的测试用例 4BenchmarkXxxx(b *testing.B) 5// 测试控制台输出的例子 6Example_Xxx() 7// 测试 Main 函数 8TestMain(m *testing.M)   关于 T 类型（单元测试）    关于 B 类型（基准/压力测试）    关于 Example 测试    3.测试用例写法   单元测试
+求和需要实现 Sum 函数，并对其编写测试用例。
+创建 sum.go 文件，代码如下：
+1package array 2func Sum(numbers int) int { 3 sum := 0 4 for i := 0; i &amp;lt;= numbers; i++ { 5 sum += i 6 } 7 return sum 8} 再创建 sum_test.go 文件，代码如下：
+1package array 2 3import ( 4 &amp;#34;reflect&amp;#34; 5 &amp;#34;testing&amp;#34; 6) 7 8func TestSum(t *testing.T) { 9 t.Run(&amp;#34;collection of any size&amp;#34;, func(t *testing.T) { 10 num := 10 11 got := Sum(num) 12 want := 55 13 if got !</description>
     </item>
     
   </channel>
