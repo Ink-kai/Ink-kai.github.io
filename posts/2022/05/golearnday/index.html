@@ -4,6 +4,8 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <meta name="referrer" content="no-referrer-when-downgrade" />
      <title>Go测试Testing | InkCat博客</title>
     <meta property="og:title" content="Go测试Testing - InkCat博客" />
     <meta property="og:type" content="article" />
@@ -26,12 +28,10 @@
      
     <link href="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet" />
     
-    
-    
-    <script type="text/javascript" src='/js/hrefblank.js'></script>
-    
 
     
+    
+    <link rel="stylesheet" href='/css/copy-to-clipboard.css' />
     
 </head>
 
@@ -194,6 +194,12 @@
         </div>
         
         
+        <div class="post-meta">
+            <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
+                    阅读</span></span>
+                    |<span class="post-date">共324字</span>，阅读约<span class="more-meta"> 2 分钟</span>
+        </div>
+        
         
         <div class="post-content">
             <p><strong>本文着重讲解些关于 <code>Testing</code> 框架的理论</strong></p>
@@ -209,15 +215,15 @@
 <ul>
 <li>
 <p><strong>测试用例有几种形式？四种</strong></p>
-<pre tabindex="0"><code>// 基本测试用例
-TestXxxx(t *testing.T)
-// 压力测试的测试用例
-BenchmarkXxxx(b *testing.B)
-// 测试控制台输出的例子
-Example_Xxx()
-// 测试 Main 函数
-TestMain(m *testing.M)
-</code></pre></li>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#f00;font-style:italic">// 基本测试用例
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#f00;font-style:italic"></span><span style="color:#c34e00">TestXxxx</span>(t *testing.T)
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#f00;font-style:italic">// 压力测试的测试用例
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#f00;font-style:italic"></span><span style="color:#c34e00">BenchmarkXxxx</span>(b *testing.B)
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span><span style="color:#f00;font-style:italic">// 测试控制台输出的例子
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span><span style="color:#f00;font-style:italic"></span><span style="color:#c34e00">Example_Xxx</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span><span style="color:#f00;font-style:italic">// 测试 Main 函数
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span><span><span style="color:#f00;font-style:italic"></span><span style="color:#c34e00">TestMain</span>(m *testing.M)
+</span></span></code></pre></div></li>
 <li>
 <p><strong>关于 <code>T</code> 类型（单元测试）</strong>
 
@@ -249,34 +255,34 @@ TestMain(m *testing.M)
 <p><strong>单元测试</strong></p>
 <p>求和需要实现 <code>Sum</code> 函数，并对其编写测试用例。</p>
 <p>创建 sum.go 文件，代码如下：</p>
-<pre tabindex="0"><code>package array
-func Sum(numbers int) int {
-    sum := 0
-    for i := 0; i &lt;= numbers; i++ {
-        sum += i
-    }
-    return sum
-}
-</code></pre><p>再创建 sum_test.go 文件，代码如下：</p>
-<pre tabindex="0"><code>package array
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#00f">package</span> array
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#00f">func</span> <span style="color:#c34e00">Sum</span>(numbers <span style="color:#00f">int</span>) <span style="color:#00f">int</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>    sum := 0
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>    <span style="color:#00f">for</span> i := 0; i &lt;= numbers; i++ {
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>        sum += i
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>    }
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>    <span style="color:#00f">return</span> sum
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span><span>}
+</span></span></code></pre></div><p>再创建 sum_test.go 文件，代码如下：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#00f">package</span> array
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span><span style="color:#00f">import</span> (
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>    <span style="color:#009c00">&#34;reflect&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>    <span style="color:#009c00">&#34;testing&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span><span style="color:#00f">func</span> <span style="color:#c34e00">TestSum</span>(t *testing.T) {
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>    t.<span style="color:#c34e00">Run</span>(<span style="color:#009c00">&#34;collection of any size&#34;</span>, <span style="color:#00f">func</span>(t *testing.T) {
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>        num := 10
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>        got := <span style="color:#c34e00">Sum</span>(num)
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>        want := 55
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>        <span style="color:#00f">if</span> got != want {
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>            t.<span style="color:#c34e00">Errorf</span>(<span style="color:#009c00">&#34;got %d want %d given, %v&#34;</span>, got, want, num)
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>        }
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>    })
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>}
+</span></span></code></pre></div><p>运行测试<code>go test -run ^TestSum$ -v</code>，结果显示 OK 说明测试用例通过
 
-import (
-    &#34;reflect&#34;
-    &#34;testing&#34;
-)
-
-func TestSum(t *testing.T) {
-    t.Run(&#34;collection of any size&#34;, func(t *testing.T) {
-        num := 10
-        got := Sum(num)
-        want := 55
-        if got != want {
-            t.Errorf(&#34;got %d want %d given, %v&#34;, got, want, num)
-        }
-    })
-}
-</code></pre><p>运行测试<code>go test -run ^TestSum$ -v</code>，结果显示 OK 说明测试用例通过</p>
-<p>
         <a data-fancybox="gallery" href="https://raw.githubusercontent.com/Ink-kai/PicGo/main/BlogImages/GoLearnDay-2022-05-21-23-50-56.png">
             <img class="mx-auto" alt="GoLearnDay-2022-05-21-23-50-56" src="https://raw.githubusercontent.com/Ink-kai/PicGo/main/BlogImages/GoLearnDay-2022-05-21-23-50-56.png" />
         </a>
@@ -285,28 +291,28 @@ func TestSum(t *testing.T) {
 <li>
 <p><strong>基准/压力测试</strong></p>
 <p>创建文件 repeat.go，代码如下：</p>
-<pre tabindex="0"><code>package repeat
-
-const repeatCount = 5
-
-func Repeat(character string) string {
-    var repeated string
-    for i := 0; i &lt; repeatCount; i++ {
-        repeated += character
-    }
-    return repeated
-}
-</code></pre><p>创建 repeat_test.go 文件，代码如下</p>
-<pre tabindex="0"><code>package repeat
-
-import &#34;testing&#34;
-
-func BenchmarkRepeat(b *testing.B) {
-    for i := 0; i &lt; b.N; i++ {
-        Repeat(&#34;a&#34;)
-    }
-}
-</code></pre><p>运行<code>go test -benchmem</code>，结果显示 ok 则测试通过。
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#00f">package</span> repeat
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span><span style="color:#00f">const</span> repeatCount = 5
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span><span style="color:#00f">func</span> <span style="color:#c34e00">Repeat</span>(character <span style="color:#00f">string</span>) <span style="color:#00f">string</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>    <span style="color:#00f">var</span> repeated <span style="color:#00f">string</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>    <span style="color:#00f">for</span> i := 0; i &lt; repeatCount; i++ {
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>        repeated += character
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>    }
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>    <span style="color:#00f">return</span> repeated
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>}
+</span></span></code></pre></div><p>创建 repeat_test.go 文件，代码如下</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#00f">package</span> repeat
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#00f">import</span> <span style="color:#009c00">&#34;testing&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span><span style="color:#00f">func</span> <span style="color:#c34e00">BenchmarkRepeat</span>(b *testing.B) {
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>    <span style="color:#00f">for</span> i := 0; i &lt; b.N; i++ {
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>        <span style="color:#c34e00">Repeat</span>(<span style="color:#009c00">&#34;a&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span><span>    }
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9</span><span>}
+</span></span></code></pre></div><p>运行<code>go test -benchmem</code>，结果显示 ok 则测试通过。
 
         <a data-fancybox="gallery" href="https://raw.githubusercontent.com/Ink-kai/PicGo/main/BlogImages/GoLearnDay-2022-05-22-00-10-26.png">
             <img class="mx-auto" alt="GoLearnDay-2022-05-22-00-10-26" src="https://raw.githubusercontent.com/Ink-kai/PicGo/main/BlogImages/GoLearnDay-2022-05-22-00-10-26.png" />
@@ -320,28 +326,28 @@ func BenchmarkRepeat(b *testing.B) {
 <p>一个示例函数以 Example 开头，如果示例函数包含以 “Output:” 开头的行注释，在运行测试时，go 会将示例函数的输出和 “Output:” 注释中的值做比较。<br>
 如果示例函数没有上述输出注释，该示例函数只会被编译而不会被运行。</p>
 <p>创建 adder.go 文件，代码如下</p>
-<pre tabindex="0"><code>package adder
-
-// Add takes two integers and returns the sum of them
-func Add(x, y int) int {
-    return x + y
-}
-</code></pre><p>创建 adder_test.go 文件，代码如下</p>
-<pre tabindex="0"><code>package adder
-
-import (
-    &#34;fmt&#34;
-    &#34;testing&#34;
-)
-
-const repeatCount = 5
-
-func ExampleAdd() {
-    sum := Add(1, 5)
-    fmt.Println(sum)
-    // Output: 6
-}
-</code></pre><p>运行<code>go test -run ^ExampleAdd$ -v</code>，结果显示 OK 则测试通过
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#00f">package</span> adder
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#f00;font-style:italic">// Add takes two integers and returns the sum of them
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#f00;font-style:italic"></span><span style="color:#00f">func</span> <span style="color:#c34e00">Add</span>(x, y <span style="color:#00f">int</span>) <span style="color:#00f">int</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>    <span style="color:#00f">return</span> x + y
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>}
+</span></span></code></pre></div><p>创建 adder_test.go 文件，代码如下</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#00f">package</span> adder
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span><span style="color:#00f">import</span> (
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>    <span style="color:#009c00">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>    <span style="color:#009c00">&#34;testing&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span><span style="color:#00f">const</span> repeatCount = 5
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#00f">func</span> <span style="color:#c34e00">ExampleAdd</span>() {
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>    sum := <span style="color:#c34e00">Add</span>(1, 5)
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>    fmt.<span style="color:#c34e00">Println</span>(sum)
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>    <span style="color:#f00;font-style:italic">// Output: 6
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span><span style="color:#f00;font-style:italic"></span>}
+</span></span></code></pre></div><p>运行<code>go test -run ^ExampleAdd$ -v</code>，结果显示 OK 则测试通过
 
         <a data-fancybox="gallery" href="https://raw.githubusercontent.com/Ink-kai/PicGo/main/BlogImages/GoLearnDay-2022-05-22-00-29-28.png">
             <img class="mx-auto" alt="GoLearnDay-2022-05-22-00-29-28" src="https://raw.githubusercontent.com/Ink-kai/PicGo/main/BlogImages/GoLearnDay-2022-05-22-00-29-28.png" />
@@ -361,7 +367,7 @@ func ExampleAdd() {
         
 <div class="post-archive">
     <ul class="post-copyright">
-        <li><strong>原文作者：</strong><a rel="author" href="https://ink-kai.github.io/">InkCat</a></li>
+        <li><strong>原文作者：</strong><a rel="author" href="https://ink-kai.github.io/">InkCat博客</a></li>
         <li style="word-break:break-all"><strong>原文链接：</strong><a href="https://ink-kai.github.io/posts/2022/05/golearnday/">https://ink-kai.github.io/posts/2022/05/golearnday/</a></li>
         <li><strong>版权声明：</strong>本作品采用<a rel="license" href="http://www.bjdcmm.org.cn/node/1494">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可，非商业转载请注明出处（作者，原文链接），商业转载请联系作者获得授权。</li>
     </ul>
@@ -373,11 +379,12 @@ func ExampleAdd() {
         
 
 
+
         <div class="post-meta meta-tags">
             
             <ul class="clearfix">
                 
-                <li><a href='/tags/go%E6%B5%8B%E8%AF%95'>go测试</a></li>
+                <li><a href='/tags/go%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95'>go单元测试</a></li>
                 
             </ul>
             
@@ -399,7 +406,7 @@ func ExampleAdd() {
                     <footer id="footer">
     <div>
         &copy; 2022
-        <a href="https://ink-kai.github.io/">InkCat博客 By InkCat</a>
+        <a href="https://ink-kai.github.io/">InkCat博客 By </a>
         
     </div>
     <br />
@@ -413,7 +420,7 @@ func ExampleAdd() {
         <div class="github-badge">
             <a href="https://ink-kai.github.io/" target="_black">
                 <span class="badge-subject">Design by</span>
-                <span class="badge-value bg-brightgreen">InkCat</span>
+                <span class="badge-value bg-brightgreen"></span>
             </a>
         </div>
         <div class="github-badge">
@@ -439,8 +446,14 @@ func ExampleAdd() {
 
 <a id="rocket" href="#top"></a>
 <script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+<script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
 
 
+
+
+<script src='/js/copy-to-clipboard.js'></script>
+
+<script src='/js/hrefblank.js'></script>
 
 
                 </div>
@@ -497,7 +510,7 @@ func ExampleAdd() {
     
     <a href="https://ink-kai.github.io/tags/chrome/">Chrome</a>
     
-    <a href="https://ink-kai.github.io/tags/go%E6%B5%8B%E8%AF%95/">go测试</a>
+    <a href="https://ink-kai.github.io/tags/go%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/">go单元测试</a>
     
     <a href="https://ink-kai.github.io/tags/%E5%8D%9A%E5%AE%A2/">博客</a>
     
@@ -506,8 +519,9 @@ func ExampleAdd() {
 
     
 
+
     <section class="widget">
-        <h3 class="widget-title">其它</h3>
+        
         <ul class="widget-list">
             <li><a href="https://ink-kai.github.io/index.xml">文章 RSS</a></li>
         </ul>
