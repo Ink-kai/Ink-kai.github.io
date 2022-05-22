@@ -1,14 +1,22 @@
 baseURL = 'https://ink-kai.github.io/'
-disableKinds = true
 languageCode = 'zh-cn'
+summaryLength = 140
 theme = "blogtheme"
 title = 'InkCat博客'
 # GA分析统计
 googleAnalytics = "GA ID"
 [markup]
 [markup.highlight]
+codeFences = true
+guessSyntax = true
+hl_Lines = ""
+lineNoStart = 1
 lineNos = true
-style = "github"
+lineNumbersInTable = false
+noClasses = true
+tabWidth = 4
+# 样式参考：https://xyproto.github.io/splash/docs/all.html
+style = "monokai"
 [menu]
 [[menu.main]]
 identifier = "categories"
@@ -29,21 +37,21 @@ weight = 4
 [Params.image_cdn]
 Host = "https://cdn.jsdelivr.net/gh/Ink-kai/Ink-kai.github.io"
 enable = true
-[Author]
-name = "InkCat"
 [Params]
+busuanzi = true
 date = "2022/05/20"
+# 图片点击放大
 fancybox = true
-# 超链接新窗口打开
-hrefblack = true
+# 本地搜索
 localSearch = true
+# 副标题
 subtitle = "要么活,要么死"
 # 开启目录
 toc = true
 # 默认：cdnjs.cloudflare.com
 cdnJsSite = "cdn.bootcdn.net"
-# 支持Disqus评论
-disqusShortname = "InkCat"
+customCSS = ["copy-to-clipboard.css"]
+customJS = ['copy-to-clipboard.js', "hrefblank.js"]
 # 知识版权
 [Params.cc]
 link = "http://www.bjdcmm.org.cn/node/1494"

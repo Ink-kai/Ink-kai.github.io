@@ -2,7 +2,7 @@
 title: 'Go测试Testing'
 author: InkCat
 tags:
-    - go测试
+    - go单元测试
 categories:
     - 技术
     - go
@@ -28,7 +28,7 @@ hiddenFromHomePage: false
 
 -   **测试用例有几种形式？四种**
 
-    ```
+    ```go
     // 基本测试用例
     TestXxxx(t *testing.T)
     // 压力测试的测试用例
@@ -55,7 +55,7 @@ hiddenFromHomePage: false
 
     创建 sum.go 文件，代码如下：
 
-    ```
+    ```go
     package array
     func Sum(numbers int) int {
         sum := 0
@@ -90,7 +90,6 @@ hiddenFromHomePage: false
     ```
 
     运行测试`go test -run ^TestSum$ -v`，结果显示 OK 说明测试用例通过
-
     ![GoLearnDay-2022-05-21-23-50-56](https://raw.githubusercontent.com/Ink-kai/PicGo/main/BlogImages/GoLearnDay-2022-05-21-23-50-56.png)
 
 -   **基准/压力测试**
