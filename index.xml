@@ -6,7 +6,18 @@
     <description>Recent content on InkCat博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 21 May 2022 23:31:18 +0800</lastBuildDate><atom:link href="https://ink-kai.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 May 2022 15:18:54 +0800</lastBuildDate><atom:link href="https://ink-kai.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go单元测试-总结</title>
+      <link>https://ink-kai.github.io/posts/2022/05/golearnday02/</link>
+      <pubDate>Mon, 23 May 2022 15:18:54 +0800</pubDate>
+      
+      <guid>https://ink-kai.github.io/posts/2022/05/golearnday02/</guid>
+      <description>本文主要梳理下go测试的方法、技巧，不注重代码 go测试中的命令讲解 1// 对当前目录含有_test.go进行测试，-v是打印测试信息，可不加-v 2go test -v 3// run参数支持正则写法。例：Test_directiroy_Search，下面是运行Search函数结尾的测试（-bench同样） 4go test -run=Search$ -v 5// 测试代码覆盖率（代码覆盖率是指代码满足所写测试用例的比例） 6go test -cover 7// 指定测试模式 8// 默认set（语句）：did each statement run? 9// count（计数）：how many times did each statement run? 10// 并行时使用atomic（并行计数）：like count, but counts precisely in parallel programs 11go test -covermode=count 12 13// 导出覆盖率数据（导出文件类型自定义） 14go test -coverprofile cover.txt -covermode=count 15// 根据cover.txt查看每个测试函数的覆盖率 16go tool cover -func cover.txt 17// HTML查看 18go tool cover -html cover.txt 对于测试的学习就暂时到此为止吧。学无止境，适可而止方是学习之道，等到深入使用时再去学习，一味地深入学习反而没有意义，要是都用不到的话学来干什么，对于我而言，技术这玩意什么有用我就学什么。
+参考链接 官方介绍-testing
+官方源码-testing</description>
+    </item>
+    
     <item>
       <title>Go测试Testing</title>
       <link>https://ink-kai.github.io/posts/2022/05/golearnday/</link>
@@ -101,7 +112,8 @@ Wallpaper Abyss - 高清壁纸, 桌面背景
       
       <guid>https://ink-kai.github.io/about/</guid>
       <description>建站初心 今天是 2022/05/20，正好是 520，可惜与我无缘。 我临时起意想着通过博客记录下自己的成长历程，生活的点点滴滴、工作中的忙忙碌碌使用越来越焦灼了。如果我每天闲的时候可以在电脑上敲着键盘记录我的一天总好过刷视频、做一些无聊的事情度日要好很多。可能我并非美玉，可是不打磨我连成为瓦砾的资格都没有，寻求改变就在今日，我还是那句话：要么活，要么死1
-关于我 一位仍在沪飘的非开发、非管理工作的底层工作者，我是从事管理类工作，为什么说非管理呢，严格来说，我经验不够，只能算打杂的。 本人业余从事程序开发（go/linux/js），喜欢浏览各大优秀博客网站，学习别人的知识，由于英语短板，文档阅读能力很弱，但是比较有耐心 如果有需要可以联系ink_kai@163.com
+关于我 一位仍在沪飘的非开发、非管理工作的底层工作者，我是从事管理类工作，为什么说非管理呢，严格来说，我经验不够，只能算打杂的。 本人业余从事程序开发（go/linux/js），喜欢浏览各大优秀博客网站，学习别人的知识，由于英语短板，文档阅读能力很弱，但是比较有耐心。
+如果有需要可以联系ink_kai@163.com
   原处取自《肖申克的救赎》中的“要么忙着活，要么忙着死”。&amp;#160;&amp;#x21a9;&amp;#xfe0e;
    </description>
     </item>
