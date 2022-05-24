@@ -1,47 +1,22 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Posts on InkCat博客</title>
-    <link>https://ink-kai.github.io/posts/</link>
-    <description>Recent content in Posts on InkCat博客</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Mon, 23 May 2022 15:18:54 +0800</lastBuildDate><atom:link href="https://ink-kai.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Go单元测试-总结</title>
-      <link>https://ink-kai.github.io/posts/2022/05/golearnday02/</link>
-      <pubDate>Mon, 23 May 2022 15:18:54 +0800</pubDate>
-      
-      <guid>https://ink-kai.github.io/posts/2022/05/golearnday02/</guid>
-      <description>本文主要梳理下go测试的方法、技巧，不注重代码 go测试中的命令讲解 1// 对当前目录含有_test.go进行测试，-v是打印测试信息，可不加-v 2go test -v 3// run参数支持正则写法。例：Test_directiroy_Search，下面是运行Search函数结尾的测试（-bench同样） 4go test -run=Search$ -v 5// 测试代码覆盖率（代码覆盖率是指代码满足所写测试用例的比例） 6go test -cover 7// 指定测试模式 8// 默认set（语句）：did each statement run? 9// count（计数）：how many times did each statement run? 10// 并行时使用atomic（并行计数）：like count, but counts precisely in parallel programs 11go test -covermode=count 12 13// 导出覆盖率数据（导出文件类型自定义） 14go test -coverprofile cover.txt -covermode=count 15// 根据cover.txt查看每个测试函数的覆盖率 16go tool cover -func cover.txt 17// HTML查看 18go tool cover -html cover.txt 对于测试的学习就暂时到此为止吧。学无止境，适可而止方是学习之道，等到深入使用时再去学习，一味地深入学习反而没有意义，要是都用不到的话学来干什么，对于我而言，技术这玩意什么有用我就学什么。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on InkCat博客</title><link>https://ink-kai.github.io/posts/</link><description>Recent content in Posts on InkCat博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 24 May 2022 11:52:04 +0800</lastBuildDate><atom:link href="https://ink-kai.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>字符编码：Ascii、unicode和utf8</title><link>https://ink-kai.github.io/posts/2022/05/ascii_unicode_and_utf8/</link><pubDate>Tue, 24 May 2022 11:52:04 +0800</pubDate><guid>https://ink-kai.github.io/posts/2022/05/ascii_unicode_and_utf8/</guid><description>ASCII ASCII 由电报码发展而来，是基于拉丁字母的一套电脑编码系统。 控制字符编号范围是0-31和127（0x00-0x1F和0x7F），共33个字符。（无法显示，主要是用来操控已经处理过的文字） 可显示字符编号范围是32-126（0x20-0x7E），共95个字符。（用户可见） 比如说空格space是32（二进制0010 0000）
+局限在于只能显示26个基本拉丁字母、阿拉伯数字和英式标点符号。只能用于显示现代美国英语。解决了部分西欧语言的显示问题。
+Unicode 官方中文名称为统一码，是计算机科学领域的业界标准。它整理、编码了世界上大部分的文字系统，使得电脑可以用更为简单的方式来呈现和处理文字。 作为国际标准采纳于通用字符集，即 ISO/IEC 10646。
+比如\u4f60表示汉字你好，\u0041表示英文字母A，\u0031表示阿拉伯数字1
+非Unicode 在非Unicode环境下，由于不同国家和地区采用的字符集不一致，很可能出现无法正常显示所有字符的情况。 微软公司使用了 代码页 技术。UTF-7的代码页是65000，UTF-8的代码页是65001。 win电脑可以通过cmd终端-属性查看。 UTF8 UTF-8（8-bit Unicode Transformation Format）是一种针对Unicode的可变长度字符编码，也是一种前缀码。它可以用一至四个字节对Unicode字符集中的所有有效编码点进行编码，属于Unicode标准的一部分。（是属于Unicode实现的一种方式） UTF-8就是为了解决向后兼容ASCII码而设计，Unicode中前128个字符，使用与ASCII码相同的二进制值的单个字节进行编码，而且字面与ASCII码的字面一一对应，这使得原来处理ASCII字符的软件无须或只须做少部分修改，即可继续使用。
+参考链接 维基百科-ASCII
+维基百科-Unicode
+维基百科-UTF8
+Unicode-符号对应表 Unicode-汉字编码表 阮一峰-字符编码笔记：ASCII，Unicode 和 UTF-8</description></item><item><title>Go单元测试-总结</title><link>https://ink-kai.github.io/posts/2022/05/golearnday02/</link><pubDate>Mon, 23 May 2022 15:18:54 +0800</pubDate><guid>https://ink-kai.github.io/posts/2022/05/golearnday02/</guid><description>本文主要梳理下go测试的方法、技巧，不注重代码 go测试中的命令讲解 1// 对当前目录含有_test.go进行测试，-v是打印测试信息，可不加-v 2go test -v 3// run参数支持正则写法。例：Test_directiroy_Search，下面是运行Search函数结尾的测试（-bench同样） 4go test -run=Search$ -v 5// 测试代码覆盖率（代码覆盖率是指代码满足所写测试用例的比例） 6go test -cover 7// 指定测试模式 8// 默认set（语句）：did each statement run? 9// count（计数）：how many times did each statement run? 10// 并行时使用atomic（并行计数）：like count, but counts precisely in parallel programs 11go test -covermode=count 12 13// 导出覆盖率数据（导出文件类型自定义） 14go test -coverprofile cover.txt -covermode=count 15// 根据cover.txt查看每个测试函数的覆盖率 16go tool cover -func cover.txt 17// HTML查看 18go tool cover -html cover.txt 对于测试的学习就暂时到此为止吧。学无止境，适可而止方是学习之道，等到深入使用时再去学习，一味地深入学习反而没有意义，要是都用不到的话学来干什么，对于我而言，技术这玩意什么有用我就学什么。
 参考链接 官方介绍-testing
-官方源码-testing</description>
-    </item>
-    
-    <item>
-      <title>Go测试Testing</title>
-      <link>https://ink-kai.github.io/posts/2022/05/golearnday/</link>
-      <pubDate>Sat, 21 May 2022 23:31:18 +0800</pubDate>
-      
-      <guid>https://ink-kai.github.io/posts/2022/05/golearnday/</guid>
-      <description>本文着重讲解些关于 Testing 框架的理论
+官方源码-testing</description></item><item><title>Go测试Testing</title><link>https://ink-kai.github.io/posts/2022/05/golearnday/</link><pubDate>Sat, 21 May 2022 23:31:18 +0800</pubDate><guid>https://ink-kai.github.io/posts/2022/05/golearnday/</guid><description>本文着重讲解些关于 Testing 框架的理论
 1.测试规范 在 go 语言中编写一个测试用例，需要满足以下条件:
- 文件必须是 xxx_test.go 命名 测试函数必须是 大写 Test 开头 函数只有一个参数：t *testing.T  2.关于 Testing 框架 前面简单讲了一下怎么编写测试用例，现在主要讲下 Testing 的用法。
-  测试用例有几种形式？四种
-1// 基本测试用例 2TestXxxx(t *testing.T) 3// 压力测试的测试用例 4BenchmarkXxxx(b *testing.B) 5// 测试控制台输出的例子 6Example_Xxx() 7// 测试 Main 函数 8TestMain(m *testing.M)   关于 T 类型（单元测试）    关于 B 类型（基准/压力测试）    关于 Example 测试    3.测试用例写法   单元测试
+文件必须是 xxx_test.go 命名 测试函数必须是 大写 Test 开头 函数只有一个参数：t *testing.T 2.关于 Testing 框架 前面简单讲了一下怎么编写测试用例，现在主要讲下 Testing 的用法。
+测试用例有几种形式？四种
+1// 基本测试用例 2TestXxxx(t *testing.T) 3// 压力测试的测试用例 4BenchmarkXxxx(b *testing.B) 5// 测试控制台输出的例子 6Example_Xxx() 7// 测试 Main 函数 8TestMain(m *testing.M) 关于 T 类型（单元测试） 关于 B 类型（基准/压力测试） 关于 Example 测试 3.测试用例写法 单元测试
 求和需要实现 Sum 函数，并对其编写测试用例。
 创建 sum.go 文件，代码如下：
 1package array 2func Sum(numbers int) int { 3 sum := 0 4 for i := 0; i &amp;lt;= numbers; i++ { 5 sum += i 6 } 7 return sum 8} 再创建 sum_test.go 文件，代码如下：
-1package array 2 3import ( 4 &amp;#34;reflect&amp;#34; 5 &amp;#34;testing&amp;#34; 6) 7 8func TestSum(t *testing.T) { 9 t.Run(&amp;#34;collection of any size&amp;#34;, func(t *testing.T) { 10 num := 10 11 got := Sum(num) 12 want := 55 13 if got !</description>
-    </item>
-    
-    <item>
-      <title>个人收藏夹中的资源</title>
-      <link>https://ink-kai.github.io/posts/2022/05/websiteresources/</link>
-      <pubDate>Fri, 20 May 2022 22:31:07 +0800</pubDate>
-      
-      <guid>https://ink-kai.github.io/posts/2022/05/websiteresources/</guid>
-      <description>文档查阅 Vue.js
+1package array 2 3import ( 4 &amp;#34;reflect&amp;#34; 5 &amp;#34;testing&amp;#34; 6) 7 8func TestSum(t *testing.T) { 9 t.Run(&amp;#34;collection of any size&amp;#34;, func(t *testing.T) { 10 num := 10 11 got := Sum(num) 12 want := 55 13 if got !</description></item><item><title>个人收藏夹中的资源</title><link>https://ink-kai.github.io/posts/2022/05/websiteresources/</link><pubDate>Fri, 20 May 2022 22:31:07 +0800</pubDate><guid>https://ink-kai.github.io/posts/2022/05/websiteresources/</guid><description>文档查阅 Vue.js
 地鼠文档
 Vue3 文档
 OSGeo 中文分会
@@ -56,7 +31,7 @@ Linux 命令大全(手册) – 真正好用的 Linux 命令在线查询网站
 Ansible 中文权威指南- 国内最专业的 Ansible 中文官方学习手册
 JavaScript 标准参考教程（alpha） &amp;ndash; JavaScript 标准参考教程（alpha）
 Go 语言标准库文档中文版 | Go 语言中文网 | Golang 中文社区 | Golang 中国
-大佬 阮一峰的个人网站 - Ruan YiFeng&#39;s Personal Website
+大佬 阮一峰的个人网站 - Ruan YiFeng's Personal Website
 骏马金龙
 阿西河前端教程丨一个助你成为全栈开发的公益网站
 线上环境 CodePen: Build, Test, and Discover Front-end Code.
@@ -75,26 +50,13 @@ HD/4K/5K Resolution Wallpapers/Backgrounds ▪ Wallroom.io
 Wallpaper Abyss - 高清壁纸, 桌面背景
 未分类 Z-Library single sign on
 维基百科，自由的百科全书
-考试酷(examcoo)-永久免费的电子作业与在线考试系统云平台</description>
-    </item>
-    
-    <item>
-      <title>Hugo搭建博客</title>
-      <link>https://ink-kai.github.io/posts/2022/05/bloginit/</link>
-      <pubDate>Fri, 20 May 2022 14:20:28 +0800</pubDate>
-      
-      <guid>https://ink-kai.github.io/posts/2022/05/bloginit/</guid>
-      <description>1.下载 hugo release 下载页面
-可选 32 或 64 下载  压缩包解压后，将 hugo.exe 所在目录添加到环境变量 PATH中 cmd 终端中执行hugo version，出现版本号即安装成功  2.BlogSite  当前目录建立 Blog 目录
+考试酷(examcoo)-永久免费的电子作业与在线考试系统云平台</description></item><item><title>Hugo搭建博客</title><link>https://ink-kai.github.io/posts/2022/05/bloginit/</link><pubDate>Fri, 20 May 2022 14:20:28 +0800</pubDate><guid>https://ink-kai.github.io/posts/2022/05/bloginit/</guid><description>1.下载 hugo release 下载页面
+可选 32 或 64 下载 压缩包解压后，将 hugo.exe 所在目录添加到环境变量 PATH中 cmd 终端中执行hugo version，出现版本号即安装成功 2.BlogSite 当前目录建立 Blog 目录
 hugo new site Blog 为 Blog 添加主题(个人使用 maupassant 主题)
 官方主题 进入 Blog 目录
-git clone https://github.com/flysnow-org/maupassant-hugo.git themes\maupassant Blog\config.toml 文件中添加 maupassant 主题配置 1theme=maupassant  发布文章(此命令会创建 home.md 文件到 Blog/content/posts 目录中)
+git clone https://github.com/flysnow-org/maupassant-hugo.git themes\maupassant Blog\config.toml 文件中添加 maupassant 主题配置 1theme=maupassant 发布文章(此命令会创建 home.md 文件到 Blog/content/posts 目录中)
 hugo new posts/home.md 启动 Blog 站点
-hugo server  3.github + picgo （图床配置） 本人使用 vscode 开发 markdown，图片粘贴上传很不方便，因此使用 github+picgo 作为图片存储
+hugo server 3.github + picgo （图床配置） 本人使用 vscode 开发 markdown，图片粘贴上传很不方便，因此使用 github+picgo 作为图片存储
 github 新建 public 仓库 xxx 生成 Token 地址
-vscdoe 安装 picgo 插件   4.使用 picgo 上传图片 win 电脑在 vscode 界面下有两个快捷键（大小写不敏感）
- Ctrl+Alt+u 上传剪贴板图片并在光标处粘贴图片链接 Ctrl+Alt+e 打开资源管理器选择图片上传  </description>
-    </item>
-    
-  </channel>
-</rss>
+vscdoe 安装 picgo 插件 4.使用 picgo 上传图片 win 电脑在 vscode 界面下有两个快捷键（大小写不敏感）
+Ctrl+Alt+u 上传剪贴板图片并在光标处粘贴图片链接 Ctrl+Alt+e 打开资源管理器选择图片上传</description></item></channel></rss>

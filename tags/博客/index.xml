@@ -1,29 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>博客 on InkCat博客</title>
-    <link>https://ink-kai.github.io/tags/%E5%8D%9A%E5%AE%A2/</link>
-    <description>Recent content in 博客 on InkCat博客</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Fri, 20 May 2022 14:20:28 +0800</lastBuildDate><atom:link href="https://ink-kai.github.io/tags/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Hugo搭建博客</title>
-      <link>https://ink-kai.github.io/posts/2022/05/bloginit/</link>
-      <pubDate>Fri, 20 May 2022 14:20:28 +0800</pubDate>
-      
-      <guid>https://ink-kai.github.io/posts/2022/05/bloginit/</guid>
-      <description>1.下载 hugo release 下载页面
-可选 32 或 64 下载  压缩包解压后，将 hugo.exe 所在目录添加到环境变量 PATH中 cmd 终端中执行hugo version，出现版本号即安装成功  2.BlogSite  当前目录建立 Blog 目录
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>博客 on InkCat博客</title><link>https://ink-kai.github.io/tags/%E5%8D%9A%E5%AE%A2/</link><description>Recent content in 博客 on InkCat博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 20 May 2022 14:20:28 +0800</lastBuildDate><atom:link href="https://ink-kai.github.io/tags/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo搭建博客</title><link>https://ink-kai.github.io/posts/2022/05/bloginit/</link><pubDate>Fri, 20 May 2022 14:20:28 +0800</pubDate><guid>https://ink-kai.github.io/posts/2022/05/bloginit/</guid><description>1.下载 hugo release 下载页面
+可选 32 或 64 下载 压缩包解压后，将 hugo.exe 所在目录添加到环境变量 PATH中 cmd 终端中执行hugo version，出现版本号即安装成功 2.BlogSite 当前目录建立 Blog 目录
 hugo new site Blog 为 Blog 添加主题(个人使用 maupassant 主题)
 官方主题 进入 Blog 目录
-git clone https://github.com/flysnow-org/maupassant-hugo.git themes\maupassant Blog\config.toml 文件中添加 maupassant 主题配置 1theme=maupassant  发布文章(此命令会创建 home.md 文件到 Blog/content/posts 目录中)
+git clone https://github.com/flysnow-org/maupassant-hugo.git themes\maupassant Blog\config.toml 文件中添加 maupassant 主题配置 1theme=maupassant 发布文章(此命令会创建 home.md 文件到 Blog/content/posts 目录中)
 hugo new posts/home.md 启动 Blog 站点
-hugo server  3.github + picgo （图床配置） 本人使用 vscode 开发 markdown，图片粘贴上传很不方便，因此使用 github+picgo 作为图片存储
+hugo server 3.github + picgo （图床配置） 本人使用 vscode 开发 markdown，图片粘贴上传很不方便，因此使用 github+picgo 作为图片存储
 github 新建 public 仓库 xxx 生成 Token 地址
-vscdoe 安装 picgo 插件   4.使用 picgo 上传图片 win 电脑在 vscode 界面下有两个快捷键（大小写不敏感）
- Ctrl+Alt+u 上传剪贴板图片并在光标处粘贴图片链接 Ctrl+Alt+e 打开资源管理器选择图片上传  </description>
-    </item>
-    
-  </channel>
-</rss>
+vscdoe 安装 picgo 插件 4.使用 picgo 上传图片 win 电脑在 vscode 界面下有两个快捷键（大小写不敏感）
+Ctrl+Alt+u 上传剪贴板图片并在光标处粘贴图片链接 Ctrl+Alt+e 打开资源管理器选择图片上传</description></item></channel></rss>
