@@ -1,6 +1,6 @@
 baseURL = 'https://ink-kai.github.io/'
 languageCode = 'zh-cn'
-summaryLength = 140
+summaryLength = 70
 theme = "blogtheme"
 title = 'InkCat博客'
 [Author]
