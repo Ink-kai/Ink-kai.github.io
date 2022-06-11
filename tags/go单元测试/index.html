@@ -18,12 +18,12 @@
 求和需要实现 Sum 函数，并对其编写测试用例。
 创建 sum.go 文件，代码如下：
 1package array 2func Sum(numbers int) int { 3 sum := 0 4 for i := 0; i &lt;= numbers; i++ { 5 sum += i 6 } 7 return sum 8} 再创建 sum_test.go 文件，代码如下：
-1package array 2 3import ( 4 "reflect" 5 "testing" 6) 7 8func TestSum(t *testing.T) { 9 t.Run("collection of any size", func(t *testing.T) { 10 num := 10 11 got := Sum(num) 12 want := 55 13 if got !……<p class=readmore><a href=https://ink-kai.github.io/posts/2022/05/golearnday/>阅读全文</a></p></div></article></div><footer id=footer><div>&copy; 2022
+1package array 2 3import ( 4 "reflect" 5 "testing" 6) 7 8func TestSum(t *testing.T) { 9 t.Run("collection of any size", func(t *testing.T) { 10 num := 10 11 got := Sum(num) 12 want := 55 13 if got != want { 14 t.Errorf("got %d want %d given, %v", got, want, num) 15 } 16 }) 17} 运行测试go test -run ^TestSum$ -v，结果显示 OK 说明测试用例通过 基准/压力测试……<p class=readmore><a href=https://ink-kai.github.io/posts/2022/05/golearnday/>阅读全文</a></p></div></article></div><footer id=footer><div>&copy; 2022
 <a href=https://ink-kai.github.io/>InkCat博客 By InkCat</a></div><br><div><div class=github-badge><a href=https://gohugo.io/ target=_black rel=nofollow><span class=badge-subject>Powered by</span>
 <span class="badge-value bg-blue">Hugo</span></a></div><div class=github-badge><a href=https://ink-kai.github.io/ target=_black><span class=badge-subject>Design by</span>
 <span class="badge-value bg-brightgreen">InkCat</span></a></div><div class=github-badge><a href=https://github.com/flysnow-org/maupassant-hugo target=_black><span class=badge-subject>Theme</span>
 <span class="badge-value bg-yellowgreen">Maupassant</span></a></div></div></footer><a id=rocket href=#top></a>
-<script type=text/javascript src="/js/totop.js?v=0.0.0" async></script>
+<script type=text/javascript src='/js/totop.js?v=0.0.0' async></script>
 <script type=text/javascript src=//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js async></script>
 <script src=/js/copy-to-clipboard.js></script>
 <script src=/js/hrefblank.js></script></div><div id=secondary><section class=widget><form id=search action=https://ink-kai.github.io/search method=get accept-charset=utf-8 target=_blank _lpchecked=1><input type=text name=q maxlength=20 placeholder=Search>

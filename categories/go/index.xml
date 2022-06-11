@@ -8,4 +8,4 @@
 求和需要实现 Sum 函数，并对其编写测试用例。
 创建 sum.go 文件，代码如下：
 1package array 2func Sum(numbers int) int { 3 sum := 0 4 for i := 0; i &amp;lt;= numbers; i++ { 5 sum += i 6 } 7 return sum 8} 再创建 sum_test.go 文件，代码如下：
-1package array 2 3import ( 4 &amp;#34;reflect&amp;#34; 5 &amp;#34;testing&amp;#34; 6) 7 8func TestSum(t *testing.T) { 9 t.Run(&amp;#34;collection of any size&amp;#34;, func(t *testing.T) { 10 num := 10 11 got := Sum(num) 12 want := 55 13 if got !</description></item></channel></rss>
+1package array 2 3import ( 4 &amp;#34;reflect&amp;#34; 5 &amp;#34;testing&amp;#34; 6) 7 8func TestSum(t *testing.T) { 9 t.Run(&amp;#34;collection of any size&amp;#34;, func(t *testing.T) { 10 num := 10 11 got := Sum(num) 12 want := 55 13 if got != want { 14 t.Errorf(&amp;#34;got %d want %d given, %v&amp;#34;, got, want, num) 15 } 16 }) 17} 运行测试go test -run ^TestSum$ -v，结果显示 OK 说明测试用例通过 基准/压力测试</description></item></channel></rss>
