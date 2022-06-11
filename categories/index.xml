@@ -1,1 +1,56 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Categories on InkCat博客</title><link>https://ink-kai.github.io/categories/</link><description>Recent content in Categories on InkCat博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 11 Jun 2022 11:49:46 +0800</lastBuildDate><atom:link href="https://ink-kai.github.io/categories/index.xml" rel="self" type="application/rss+xml"/><item><title>linux</title><link>https://ink-kai.github.io/categories/linux/</link><pubDate>Sat, 11 Jun 2022 11:49:46 +0800</pubDate><guid>https://ink-kai.github.io/categories/linux/</guid><description/></item><item><title>技术</title><link>https://ink-kai.github.io/categories/%E6%8A%80%E6%9C%AF/</link><pubDate>Tue, 24 May 2022 11:52:04 +0800</pubDate><guid>https://ink-kai.github.io/categories/%E6%8A%80%E6%9C%AF/</guid><description/></item><item><title>go</title><link>https://ink-kai.github.io/categories/go/</link><pubDate>Mon, 23 May 2022 15:18:54 +0800</pubDate><guid>https://ink-kai.github.io/categories/go/</guid><description/></item><item><title>资源</title><link>https://ink-kai.github.io/categories/%E8%B5%84%E6%BA%90/</link><pubDate>Fri, 20 May 2022 22:31:07 +0800</pubDate><guid>https://ink-kai.github.io/categories/%E8%B5%84%E6%BA%90/</guid><description/></item><item><title>日常</title><link>https://ink-kai.github.io/categories/%E6%97%A5%E5%B8%B8/</link><pubDate>Fri, 20 May 2022 14:20:28 +0800</pubDate><guid>https://ink-kai.github.io/categories/%E6%97%A5%E5%B8%B8/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on InkCat博客</title>
+    <link>https://ink-kai.github.io/categories/</link>
+    <description>Recent content in Categories on InkCat博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 11 Jun 2022 11:49:46 +0800</lastBuildDate><atom:link href="https://ink-kai.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>linux</title>
+      <link>https://ink-kai.github.io/categories/linux/</link>
+      <pubDate>Sat, 11 Jun 2022 11:49:46 +0800</pubDate>
+      
+      <guid>https://ink-kai.github.io/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>技术</title>
+      <link>https://ink-kai.github.io/categories/%E6%8A%80%E6%9C%AF/</link>
+      <pubDate>Tue, 24 May 2022 11:52:04 +0800</pubDate>
+      
+      <guid>https://ink-kai.github.io/categories/%E6%8A%80%E6%9C%AF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>go</title>
+      <link>https://ink-kai.github.io/categories/go/</link>
+      <pubDate>Mon, 23 May 2022 15:18:54 +0800</pubDate>
+      
+      <guid>https://ink-kai.github.io/categories/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>资源</title>
+      <link>https://ink-kai.github.io/categories/%E8%B5%84%E6%BA%90/</link>
+      <pubDate>Fri, 20 May 2022 22:31:07 +0800</pubDate>
+      
+      <guid>https://ink-kai.github.io/categories/%E8%B5%84%E6%BA%90/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>日常</title>
+      <link>https://ink-kai.github.io/categories/%E6%97%A5%E5%B8%B8/</link>
+      <pubDate>Fri, 20 May 2022 14:20:28 +0800</pubDate>
+      
+      <guid>https://ink-kai.github.io/categories/%E6%97%A5%E5%B8%B8/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

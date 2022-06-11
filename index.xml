@@ -1,4 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>InkCat博客</title><link>https://ink-kai.github.io/</link><description>Recent content on InkCat博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 11 Jun 2022 11:49:46 +0800</lastBuildDate><atom:link href="https://ink-kai.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>记-centos文件系统损坏导致部分服务无法使用</title><link>https://ink-kai.github.io/posts/2022/06/11/centossystembug/</link><pubDate>Sat, 11 Jun 2022 11:49:46 +0800</pubDate><guid>https://ink-kai.github.io/posts/2022/06/11/centossystembug/</guid><description>序 不得不处理了，再也不能通过重装解决这个问题了。 本地虚拟机安装的centos7系统出现故障了，修复的时候忘记录了，只能通过文字描述。本文图片不实，但是问题都是一样的
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>InkCat博客</title>
+    <link>https://ink-kai.github.io/</link>
+    <description>Recent content on InkCat博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 11 Jun 2022 11:49:46 +0800</lastBuildDate><atom:link href="https://ink-kai.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>记-centos文件系统损坏导致部分服务无法使用</title>
+      <link>https://ink-kai.github.io/posts/2022/06/11/centossystembug/</link>
+      <pubDate>Sat, 11 Jun 2022 11:49:46 +0800</pubDate>
+      
+      <guid>https://ink-kai.github.io/posts/2022/06/11/centossystembug/</guid>
+      <description>序 不得不处理了，再也不能通过重装解决这个问题了。 本地虚拟机安装的centos7系统出现故障了，修复的时候忘记录了，只能通过文字描述。本文图片不实，但是问题都是一样的
 找到问题所在 登录centos系统后，提示以下错误 解释一下这段什么意思？
 第二行是说：xfs(dm-0)检测到元数据损坏。 生成的错误日志保存在“/run/in itramfs/rdsosreport.txt”
 dm-0是centos系统中挂载的文件系统，可以通过ls -l /dev/mapper查看，dm-0是从/dev挂的一个软连接 OK，找到问题所在。文件系统dm-0元数据损坏
@@ -6,7 +21,16 @@ dm-0是centos系统中挂载的文件系统，可以通过ls -l /dev/mapper查�
 大致翻译下：救援模式试图找到你的linux系统并挂载的以下目录：/mnt/sysimage。你可以对其进行更改你的系统 选择步骤1，继续执行此步骤。 选择步骤2，可以让你的文件系统保持只读状态 选择步骤3，进入内核（shell） 选择步骤4，重启 查看需要修复的文件系统ls -l /dev/mapper xfs_repair是对xfs系统进行修复的一个命令 -d 紧急修复（针对文件系统，我也不是很清楚，但是文件系统只能使用该选项进行处理，否则无法修复file system） -L 强制清空日志。生产环境勿用（请备份文件） 先卸载文件系统umount /dev/dm-0 -v 使用xfs_repair修复xfs_repair -d /dev/dm-0（这里必须使用到-d）
 虽然最后还是提示：找不到有效的次要数据块。注意，secondary只是代表次要，metadata主要元数据已经修复
 在我看来，次要数据块应该是用户数据和服务日志丢失
-重启centos再进入系统就好了！！！</description></item><item><title>字符编码：Ascii、unicode和utf8</title><link>https://ink-kai.github.io/posts/2022/05/ascii_unicode_and_utf8/</link><pubDate>Tue, 24 May 2022 11:52:04 +0800</pubDate><guid>https://ink-kai.github.io/posts/2022/05/ascii_unicode_and_utf8/</guid><description>ASCII ASCII 由电报码发展而来，是基于拉丁字母的一套电脑编码系统。 控制字符编号范围是0-31和127（0x00-0x1F和0x7F），共33个字符。（无法显示，主要是用来操控已经处理过的文字） 可显示字符编号范围是32-126（0x20-0x7E），共95个字符。（用户可见） 比如说空格space是32（二进制0010 0000）
+重启centos再进入系统就好了！！！</description>
+    </item>
+    
+    <item>
+      <title>字符编码：Ascii、unicode和utf8</title>
+      <link>https://ink-kai.github.io/posts/2022/05/ascii_unicode_and_utf8/</link>
+      <pubDate>Tue, 24 May 2022 11:52:04 +0800</pubDate>
+      
+      <guid>https://ink-kai.github.io/posts/2022/05/ascii_unicode_and_utf8/</guid>
+      <description>ASCII ASCII 由电报码发展而来，是基于拉丁字母的一套电脑编码系统。 控制字符编号范围是0-31和127（0x00-0x1F和0x7F），共33个字符。（无法显示，主要是用来操控已经处理过的文字） 可显示字符编号范围是32-126（0x20-0x7E），共95个字符。（用户可见） 比如说空格space是32（二进制0010 0000）
 局限在于只能显示26个基本拉丁字母、阿拉伯数字和英式标点符号。只能用于显示现代美国英语。解决了部分西欧语言的显示问题。
 Unicode 官方中文名称为统一码，是计算机科学领域的业界标准。它整理、编码了世界上大部分的文字系统，使得电脑可以用更为简单的方式来呈现和处理文字。 作为国际标准采纳于通用字符集，即 ISO/IEC 10646。
 比如\u4f60表示汉字你好，\u0041表示英文字母A，\u0031表示阿拉伯数字1
@@ -14,9 +38,27 @@ Unicode 官方中文名称为统一码，是计算机科学领域的业界标准
 参考链接 维基百科-ASCII
 维基百科-Unicode
 维基百科-UTF8
-Unicode-符号对应表 Unicode-汉字编码表 阮一峰-字符编码笔记：ASCII，Unicode 和 UTF-8</description></item><item><title>Go单元测试-总结</title><link>https://ink-kai.github.io/posts/2022/05/golearnday02/</link><pubDate>Mon, 23 May 2022 15:18:54 +0800</pubDate><guid>https://ink-kai.github.io/posts/2022/05/golearnday02/</guid><description>本文主要梳理下go测试的方法、技巧，不注重代码 go测试中的命令讲解 1// 对当前目录含有_test.go进行测试，-v是打印测试信息，可不加-v 2go test -v 3// run参数支持正则写法。例：Test_directiroy_Search，下面是运行Search函数结尾的测试（-bench同样） 4go test -run=Search$ -v 5// 测试代码覆盖率（代码覆盖率是指代码满足所写测试用例的比例） 6go test -cover 7// 指定测试模式 8// 默认set（语句）：did each statement run? 9// count（计数）：how many times did each statement run? 10// 并行时使用atomic（并行计数）：like count, but counts precisely in parallel programs 11go test -covermode=count 12 13// 导出覆盖率数据（导出文件类型自定义） 14go test -coverprofile cover.txt -covermode=count 15// 根据cover.txt查看每个测试函数的覆盖率 16go tool cover -func cover.txt 17// HTML查看 18go tool cover -html cover.txt 对于测试的学习就暂时到此为止吧。学无止境，适可而止方是学习之道，等到深入使用时再去学习，一味地深入学习反而没有意义，要是都用不到的话学来干什么，对于我而言，技术这玩意什么有用我就学什么。
+Unicode-符号对应表 Unicode-汉字编码表 阮一峰-字符编码笔记：ASCII，Unicode 和 UTF-8</description>
+    </item>
+    
+    <item>
+      <title>Go单元测试-总结</title>
+      <link>https://ink-kai.github.io/posts/2022/05/golearnday02/</link>
+      <pubDate>Mon, 23 May 2022 15:18:54 +0800</pubDate>
+      
+      <guid>https://ink-kai.github.io/posts/2022/05/golearnday02/</guid>
+      <description>本文主要梳理下go测试的方法、技巧，不注重代码 go测试中的命令讲解 1// 对当前目录含有_test.go进行测试，-v是打印测试信息，可不加-v 2go test -v 3// run参数支持正则写法。例：Test_directiroy_Search，下面是运行Search函数结尾的测试（-bench同样） 4go test -run=Search$ -v 5// 测试代码覆盖率（代码覆盖率是指代码满足所写测试用例的比例） 6go test -cover 7// 指定测试模式 8// 默认set（语句）：did each statement run? 9// count（计数）：how many times did each statement run? 10// 并行时使用atomic（并行计数）：like count, but counts precisely in parallel programs 11go test -covermode=count 12 13// 导出覆盖率数据（导出文件类型自定义） 14go test -coverprofile cover.txt -covermode=count 15// 根据cover.txt查看每个测试函数的覆盖率 16go tool cover -func cover.txt 17// HTML查看 18go tool cover -html cover.txt 对于测试的学习就暂时到此为止吧。学无止境，适可而止方是学习之道，等到深入使用时再去学习，一味地深入学习反而没有意义，要是都用不到的话学来干什么，对于我而言，技术这玩意什么有用我就学什么。
 参考链接 官方介绍-testing
-官方源码-testing</description></item><item><title>Go测试Testing</title><link>https://ink-kai.github.io/posts/2022/05/golearnday/</link><pubDate>Sat, 21 May 2022 23:31:18 +0800</pubDate><guid>https://ink-kai.github.io/posts/2022/05/golearnday/</guid><description>本文着重讲解些关于 Testing 框架的理论
+官方源码-testing</description>
+    </item>
+    
+    <item>
+      <title>Go测试Testing</title>
+      <link>https://ink-kai.github.io/posts/2022/05/golearnday/</link>
+      <pubDate>Sat, 21 May 2022 23:31:18 +0800</pubDate>
+      
+      <guid>https://ink-kai.github.io/posts/2022/05/golearnday/</guid>
+      <description>本文着重讲解些关于 Testing 框架的理论
 1.测试规范 在 go 语言中编写一个测试用例，需要满足以下条件:
 文件必须是 xxx_test.go 命名 测试函数必须是 大写 Test 开头 函数只有一个参数：t *testing.T 2.关于 Testing 框架 前面简单讲了一下怎么编写测试用例，现在主要讲下 Testing 的用法。
 测试用例有几种形式？四种
@@ -24,7 +66,16 @@ Unicode-符号对应表 Unicode-汉字编码表 阮一峰-字符编码笔记：A
 求和需要实现 Sum 函数，并对其编写测试用例。
 创建 sum.go 文件，代码如下：
 1package array 2func Sum(numbers int) int { 3 sum := 0 4 for i := 0; i &amp;lt;= numbers; i++ { 5 sum += i 6 } 7 return sum 8} 再创建 sum_test.go 文件，代码如下：
-1package array 2 3import ( 4 &amp;#34;reflect&amp;#34; 5 &amp;#34;testing&amp;#34; 6) 7 8func TestSum(t *testing.T) { 9 t.Run(&amp;#34;collection of any size&amp;#34;, func(t *testing.T) { 10 num := 10 11 got := Sum(num) 12 want := 55 13 if got != want { 14 t.Errorf(&amp;#34;got %d want %d given, %v&amp;#34;, got, want, num) 15 } 16 }) 17} 运行测试go test -run ^TestSum$ -v，结果显示 OK 说明测试用例通过 基准/压力测试</description></item><item><title>个人收藏夹中的资源</title><link>https://ink-kai.github.io/posts/2022/05/websiteresources/</link><pubDate>Fri, 20 May 2022 22:31:07 +0800</pubDate><guid>https://ink-kai.github.io/posts/2022/05/websiteresources/</guid><description>文档查阅 Vue.js
+1package array 2 3import ( 4 &amp;#34;reflect&amp;#34; 5 &amp;#34;testing&amp;#34; 6) 7 8func TestSum(t *testing.T) { 9 t.Run(&amp;#34;collection of any size&amp;#34;, func(t *testing.T) { 10 num := 10 11 got := Sum(num) 12 want := 55 13 if got != want { 14 t.Errorf(&amp;#34;got %d want %d given, %v&amp;#34;, got, want, num) 15 } 16 }) 17} 运行测试go test -run ^TestSum$ -v，结果显示 OK 说明测试用例通过 基准/压力测试</description>
+    </item>
+    
+    <item>
+      <title>个人收藏夹中的资源</title>
+      <link>https://ink-kai.github.io/posts/2022/05/websiteresources/</link>
+      <pubDate>Fri, 20 May 2022 22:31:07 +0800</pubDate>
+      
+      <guid>https://ink-kai.github.io/posts/2022/05/websiteresources/</guid>
+      <description>文档查阅 Vue.js
 地鼠文档
 Vue3 文档
 OSGeo 中文分会
@@ -39,7 +90,7 @@ Linux 命令大全(手册) – 真正好用的 Linux 命令在线查询网站
 Ansible 中文权威指南- 国内最专业的 Ansible 中文官方学习手册
 JavaScript 标准参考教程（alpha） &amp;ndash; JavaScript 标准参考教程（alpha）
 Go 语言标准库文档中文版 | Go 语言中文网 | Golang 中文社区 | Golang 中国
-大佬 阮一峰的个人网站 - Ruan YiFeng's Personal Website
+大佬 阮一峰的个人网站 - Ruan YiFeng&#39;s Personal Website
 骏马金龙
 阿西河前端教程丨一个助你成为全栈开发的公益网站
 线上环境 CodePen: Build, Test, and Discover Front-end Code.
@@ -58,10 +109,55 @@ HD/4K/5K Resolution Wallpapers/Backgrounds ▪ Wallroom.io
 Wallpaper Abyss - 高清壁纸, 桌面背景
 未分类 Z-Library single sign on
 维基百科，自由的百科全书
-考试酷(examcoo)-永久免费的电子作业与在线考试系统云平台</description></item><item><title>关于本站</title><link>https://ink-kai.github.io/about/</link><pubDate>Fri, 20 May 2022 20:10:27 +0800</pubDate><guid>https://ink-kai.github.io/about/</guid><description>建站初心 今天是 2022/05/20，正好是 520，可惜与我无缘。 我临时起意想着通过博客记录下自己的成长历程，生活的点点滴滴、工作中的忙忙碌碌使用越来越焦灼了。如果我每天闲的时候可以在电脑上敲着键盘记录我的一天总好过刷视频、做一些无聊的事情度日要好很多。可能我并非美玉，可是不打磨我连成为瓦砾的资格都没有，寻求改变就在今日，我还是那句话：要么活，要么死1
+考试酷(examcoo)-永久免费的电子作业与在线考试系统云平台</description>
+    </item>
+    
+    <item>
+      <title>归档</title>
+      <link>https://ink-kai.github.io/archives/</link>
+      <pubDate>Fri, 20 May 2022 21:49:45 +0800</pubDate>
+      
+      <guid>https://ink-kai.github.io/archives/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>搜索</title>
+      <link>https://ink-kai.github.io/search/</link>
+      <pubDate>Fri, 20 May 2022 21:46:43 +0800</pubDate>
+      
+      <guid>https://ink-kai.github.io/search/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>分类</title>
+      <link>https://ink-kai.github.io/category/</link>
+      <pubDate>Fri, 20 May 2022 21:46:35 +0800</pubDate>
+      
+      <guid>https://ink-kai.github.io/category/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>关于本站</title>
+      <link>https://ink-kai.github.io/about/</link>
+      <pubDate>Fri, 20 May 2022 20:10:27 +0800</pubDate>
+      
+      <guid>https://ink-kai.github.io/about/</guid>
+      <description>建站初心 今天是 2022/05/20，正好是 520，可惜与我无缘。 我临时起意想着通过博客记录下自己的成长历程，生活的点点滴滴、工作中的忙忙碌碌使用越来越焦灼了。如果我每天闲的时候可以在电脑上敲着键盘记录我的一天总好过刷视频、做一些无聊的事情度日要好很多。可能我并非美玉，可是不打磨我连成为瓦砾的资格都没有，寻求改变就在今日，我还是那句话：要么活，要么死1
 关于我 一位仍在沪飘的非开发、非管理工作的底层工作者，我是从事管理类工作，为什么说非管理呢，严格来说，我经验不够，只能算打杂的。 本人业余从事程序开发（go/linux/js），喜欢浏览各大优秀博客网站，学习别人的知识，由于英语短板，文档阅读能力很弱，但是比较有耐心。
 如果有需要可以联系ink_kai@163.com
-原处取自《肖申克的救赎》中的“要么忙着活，要么忙着死”。&amp;#160;&amp;#x21a9;&amp;#xfe0e;</description></item><item><title>Hugo搭建博客</title><link>https://ink-kai.github.io/posts/2022/05/bloginit/</link><pubDate>Fri, 20 May 2022 14:20:28 +0800</pubDate><guid>https://ink-kai.github.io/posts/2022/05/bloginit/</guid><description>1.下载 hugo release 下载页面
+原处取自《肖申克的救赎》中的“要么忙着活，要么忙着死”。&amp;#160;&amp;#x21a9;&amp;#xfe0e;</description>
+    </item>
+    
+    <item>
+      <title>Hugo搭建博客</title>
+      <link>https://ink-kai.github.io/posts/2022/05/bloginit/</link>
+      <pubDate>Fri, 20 May 2022 14:20:28 +0800</pubDate>
+      
+      <guid>https://ink-kai.github.io/posts/2022/05/bloginit/</guid>
+      <description>1.下载 hugo release 下载页面
 可选 32 或 64 下载 压缩包解压后，将 hugo.exe 所在目录添加到环境变量 PATH中 cmd 终端中执行hugo version，出现版本号即安装成功 2.BlogSite 当前目录建立 Blog 目录
 hugo new site Blog 为 Blog 添加主题(个人使用 maupassant 主题)
 官方主题 进入 Blog 目录
@@ -70,4 +166,8 @@ hugo new posts/home.md 启动 Blog 站点
 hugo server 3.github + picgo （图床配置） 本人使用 vscode 开发 markdown，图片粘贴上传很不方便，因此使用 github+picgo 作为图片存储
 github 新建 public 仓库 xxx 生成 Token 地址
 vscdoe 安装 picgo 插件 4.使用 picgo 上传图片 win 电脑在 vscode 界面下有两个快捷键（大小写不敏感）
-Ctrl+Alt+u 上传剪贴板图片并在光标处粘贴图片链接 Ctrl+Alt+e 打开资源管理器选择图片上传</description></item></channel></rss>
+Ctrl+Alt+u 上传剪贴板图片并在光标处粘贴图片链接 Ctrl+Alt+e 打开资源管理器选择图片上传 </description>
+    </item>
+    
+  </channel>
+</rss>

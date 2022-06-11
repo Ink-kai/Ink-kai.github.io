@@ -1,9 +1,95 @@
-<!doctype html><html lang=zh-cn><head><meta name=generator content="Hugo 0.100.2"><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=referrer content="no-referrer-when-downgrade"><title>InkCat博客 | 要么活,要么死</title><meta property="og:title" content="InkCat博客 | 要么活,要么死"><meta property="og:type" content="website"><meta name=Keywords content><meta name=description content><meta property="og:url" content="https://ink-kai.github.io/"><link rel="shortcut icon" href=/favicon.ico type=image/x-icon><link rel=stylesheet href=/css/normalize.css><link rel=stylesheet href=/css/style.css><link rel=alternate type=application/rss+xml href=https://ink-kai.github.io/index.xml title=InkCat博客><script type=text/javascript src=//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js></script>
-<link href=https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css rel=stylesheet><link rel=stylesheet href=/css/copy-to-clipboard.css></head><body><header id=header class=clearfix><div class=container><div class=col-group><div class=site-name><h1><a id=logo href=https://ink-kai.github.io/>InkCat博客</a></h1><p class=description>要么活,要么死</p></div><div><nav id=nav-menu class=clearfix><a class=current href=https://ink-kai.github.io/>首页</a>
-<a href=https://ink-kai.github.io/categories/ title=分类>分类</a>
-<a href=https://ink-kai.github.io/archives/ title=归档>归档</a>
-<a href=https://ink-kai.github.io/about/ title=关于>关于</a></nav></div></div></div></header><div id=body><div class=container><div class=col-group><div class=col-8 id=main><div class=res-cons><article class=post><header><h1 class=post-title><a href=https://ink-kai.github.io/posts/2022/06/11/centossystembug/ title=记-centos文件系统损坏导致部分服务无法使用>记-centos文件系统损坏导致部分服务无法使用</a></h1></header><date class="post-meta meta-date">2022年6月11日</date><div class=post-meta><span>|</span>
-<span class=meta-category><a href=/categories/linux>linux</a></span></div><div class=post-content>序 不得不处理了，再也不能通过重装解决这个问题了。 本地虚拟机安装的centos7系统出现故障了，修复的时候忘记录了，只能通过文字描述。本文图片不实，但是问题都是一样的
+<!doctype html>
+<html lang="zh-cn">
+<head>
+	<meta name="generator" content="Hugo 0.100.2" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+     <title>InkCat博客 | 要么活,要么死</title>
+    <meta property="og:title" content="InkCat博客 | 要么活,要么死" />
+    <meta property="og:type" content="website" />
+    <meta name="Keywords" content="" />
+    <meta name="description" content="" />
+    <meta property="og:url" content="https://ink-kai.github.io/" />
+    <link rel="shortcut icon" href='/favicon.ico' type="image/x-icon" />
+
+    <link rel="stylesheet" href='/css/normalize.css' />
+    <link rel="stylesheet" href='/css/style.css' />
+    
+    <link rel="alternate" type="application/rss+xml" href="https://ink-kai.github.io/index.xml" title="InkCat博客" />
+     <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+     
+    <link href="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet" />
+    
+
+    
+    
+    <link rel="stylesheet" href='/css/copy-to-clipboard.css' />
+    
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <h1>
+                        <a id="logo" href="https://ink-kai.github.io/">
+                            InkCat博客
+                        </a>
+                    </h1>
+                
+                <p class="description">要么活,要么死</p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="https://ink-kai.github.io/">首页</a>
+                    
+                    <a  href="https://ink-kai.github.io/categories/" title="分类">分类</a>
+                    
+                    <a  href="https://ink-kai.github.io/archives/" title="归档">归档</a>
+                    
+                    <a  href="https://ink-kai.github.io/about/" title="关于">关于</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://ink-kai.github.io/posts/2022/06/11/centossystembug/" title="记-centos文件系统损坏导致部分服务无法使用">记-centos文件系统损坏导致部分服务无法使用</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2022年6月11日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='/categories/linux'>linux</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            序 不得不处理了，再也不能通过重装解决这个问题了。 本地虚拟机安装的centos7系统出现故障了，修复的时候忘记录了，只能通过文字描述。本文图片不实，但是问题都是一样的
 找到问题所在 登录centos系统后，提示以下错误 解释一下这段什么意思？
 第二行是说：xfs(dm-0)检测到元数据损坏。 生成的错误日志保存在“/run/in itramfs/rdsosreport.txt”
 dm-0是centos系统中挂载的文件系统，可以通过ls -l /dev/mapper查看，dm-0是从/dev挂的一个软连接 OK，找到问题所在。文件系统dm-0元数据损坏
@@ -11,8 +97,32 @@ dm-0是centos系统中挂载的文件系统，可以通过ls -l /dev/mapper查�
 大致翻译下：救援模式试图找到你的linux系统并挂载的以下目录：/mnt/sysimage。你可以对其进行更改你的系统 选择步骤1，继续执行此步骤。 选择步骤2，可以让你的文件系统保持只读状态 选择步骤3，进入内核（shell） 选择步骤4，重启 查看需要修复的文件系统ls -l /dev/mapper xfs_repair是对xfs系统进行修复的一个命令 -d 紧急修复（针对文件系统，我也不是很清楚，但是文件系统只能使用该选项进行处理，否则无法修复file system） -L 强制清空日志。生产环境勿用（请备份文件） 先卸载文件系统umount /dev/dm-0 -v 使用xfs_repair修复xfs_repair -d /dev/dm-0（这里必须使用到-d）
 虽然最后还是提示：找不到有效的次要数据块。注意，secondary只是代表次要，metadata主要元数据已经修复
 在我看来，次要数据块应该是用户数据和服务日志丢失
-重启centos再进入系统就好了！！！……</div><p class=readmore><a href=https://ink-kai.github.io/posts/2022/06/11/centossystembug/>阅读全文</a></p></article><article class=post><header><h1 class=post-title><a href=https://ink-kai.github.io/posts/2022/05/ascii_unicode_and_utf8/ title=字符编码：Ascii、unicode和utf8>字符编码：Ascii、unicode和utf8</a></h1></header><date class="post-meta meta-date">2022年5月24日</date><div class=post-meta><span>|</span>
-<span class=meta-category><a href=/categories/%E6%8A%80%E6%9C%AF>技术</a></span></div><div class=post-content>ASCII ASCII 由电报码发展而来，是基于拉丁字母的一套电脑编码系统。 控制字符编号范围是0-31和127（0x00-0x1F和0x7F），共33个字符。（无法显示，主要是用来操控已经处理过的文字） 可显示字符编号范围是32-126（0x20-0x7E），共95个字符。（用户可见） 比如说空格space是32（二进制0010 0000）
+重启centos再进入系统就好了！！！……
+        </div>
+        <p class="readmore"><a href="https://ink-kai.github.io/posts/2022/06/11/centossystembug/">阅读全文</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://ink-kai.github.io/posts/2022/05/ascii_unicode_and_utf8/" title="字符编码：Ascii、unicode和utf8">字符编码：Ascii、unicode和utf8</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2022年5月24日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='/categories/%E6%8A%80%E6%9C%AF'>技术</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            ASCII ASCII 由电报码发展而来，是基于拉丁字母的一套电脑编码系统。 控制字符编号范围是0-31和127（0x00-0x1F和0x7F），共33个字符。（无法显示，主要是用来操控已经处理过的文字） 可显示字符编号范围是32-126（0x20-0x7E），共95个字符。（用户可见） 比如说空格space是32（二进制0010 0000）
 局限在于只能显示26个基本拉丁字母、阿拉伯数字和英式标点符号。只能用于显示现代美国英语。解决了部分西欧语言的显示问题。
 Unicode 官方中文名称为统一码，是计算机科学领域的业界标准。它整理、编码了世界上大部分的文字系统，使得电脑可以用更为简单的方式来呈现和处理文字。 作为国际标准采纳于通用字符集，即 ISO/IEC 10646。
 比如\u4f60表示汉字你好，\u0041表示英文字母A，\u0031表示阿拉伯数字1
@@ -20,13 +130,63 @@ Unicode 官方中文名称为统一码，是计算机科学领域的业界标准
 参考链接 维基百科-ASCII
 维基百科-Unicode
 维基百科-UTF8
-Unicode-符号对应表 Unicode-汉字编码表 阮一峰-字符编码笔记：ASCII，Unicode 和 UTF-8……</div><p class=readmore><a href=https://ink-kai.github.io/posts/2022/05/ascii_unicode_and_utf8/>阅读全文</a></p></article><article class=post><header><h1 class=post-title><a href=https://ink-kai.github.io/posts/2022/05/golearnday02/ title=Go单元测试-总结>Go单元测试-总结</a></h1></header><date class="post-meta meta-date">2022年5月23日</date><div class=post-meta><span>|</span>
-<span class=meta-category><a href=/categories/%E6%8A%80%E6%9C%AF>技术</a></span>
-<span class=meta-category><a href=/categories/go>go</a></span></div><div class=post-content>本文主要梳理下go测试的方法、技巧，不注重代码 go测试中的命令讲解 1// 对当前目录含有_test.go进行测试，-v是打印测试信息，可不加-v 2go test -v 3// run参数支持正则写法。例：Test_directiroy_Search，下面是运行Search函数结尾的测试（-bench同样） 4go test -run=Search$ -v 5// 测试代码覆盖率（代码覆盖率是指代码满足所写测试用例的比例） 6go test -cover 7// 指定测试模式 8// 默认set（语句）：did each statement run? 9// count（计数）：how many times did each statement run? 10// 并行时使用atomic（并行计数）：like count, but counts precisely in parallel programs 11go test -covermode=count 12 13// 导出覆盖率数据（导出文件类型自定义） 14go test -coverprofile cover.txt -covermode=count 15// 根据cover.txt查看每个测试函数的覆盖率 16go tool cover -func cover.txt 17// HTML查看 18go tool cover -html cover.txt 对于测试的学习就暂时到此为止吧。学无止境，适可而止方是学习之道，等到深入使用时再去学习，一味地深入学习反而没有意义，要是都用不到的话学来干什么，对于我而言，技术这玩意什么有用我就学什么。
+Unicode-符号对应表 Unicode-汉字编码表 阮一峰-字符编码笔记：ASCII，Unicode 和 UTF-8……
+        </div>
+        <p class="readmore"><a href="https://ink-kai.github.io/posts/2022/05/ascii_unicode_and_utf8/">阅读全文</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://ink-kai.github.io/posts/2022/05/golearnday02/" title="Go单元测试-总结">Go单元测试-总结</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2022年5月23日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='/categories/%E6%8A%80%E6%9C%AF'>技术</a></span>
+            
+            <span class="meta-category"><a href='/categories/go'>go</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            本文主要梳理下go测试的方法、技巧，不注重代码 go测试中的命令讲解 1// 对当前目录含有_test.go进行测试，-v是打印测试信息，可不加-v 2go test -v 3// run参数支持正则写法。例：Test_directiroy_Search，下面是运行Search函数结尾的测试（-bench同样） 4go test -run=Search$ -v 5// 测试代码覆盖率（代码覆盖率是指代码满足所写测试用例的比例） 6go test -cover 7// 指定测试模式 8// 默认set（语句）：did each statement run? 9// count（计数）：how many times did each statement run? 10// 并行时使用atomic（并行计数）：like count, but counts precisely in parallel programs 11go test -covermode=count 12 13// 导出覆盖率数据（导出文件类型自定义） 14go test -coverprofile cover.txt -covermode=count 15// 根据cover.txt查看每个测试函数的覆盖率 16go tool cover -func cover.txt 17// HTML查看 18go tool cover -html cover.txt 对于测试的学习就暂时到此为止吧。学无止境，适可而止方是学习之道，等到深入使用时再去学习，一味地深入学习反而没有意义，要是都用不到的话学来干什么，对于我而言，技术这玩意什么有用我就学什么。
 参考链接 官方介绍-testing
-官方源码-testing……</div><p class=readmore><a href=https://ink-kai.github.io/posts/2022/05/golearnday02/>阅读全文</a></p></article><article class=post><header><h1 class=post-title><a href=https://ink-kai.github.io/posts/2022/05/golearnday/ title=Go测试Testing>Go测试Testing</a></h1></header><date class="post-meta meta-date">2022年5月21日</date><div class=post-meta><span>|</span>
-<span class=meta-category><a href=/categories/%E6%8A%80%E6%9C%AF>技术</a></span>
-<span class=meta-category><a href=/categories/go>go</a></span></div><div class=post-content>本文着重讲解些关于 Testing 框架的理论
+官方源码-testing……
+        </div>
+        <p class="readmore"><a href="https://ink-kai.github.io/posts/2022/05/golearnday02/">阅读全文</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://ink-kai.github.io/posts/2022/05/golearnday/" title="Go测试Testing">Go测试Testing</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2022年5月21日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='/categories/%E6%8A%80%E6%9C%AF'>技术</a></span>
+            
+            <span class="meta-category"><a href='/categories/go'>go</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            本文着重讲解些关于 Testing 框架的理论
 1.测试规范 在 go 语言中编写一个测试用例，需要满足以下条件:
 文件必须是 xxx_test.go 命名 测试函数必须是 大写 Test 开头 函数只有一个参数：t *testing.T 2.关于 Testing 框架 前面简单讲了一下怎么编写测试用例，现在主要讲下 Testing 的用法。
 测试用例有几种形式？四种
@@ -34,8 +194,32 @@ Unicode-符号对应表 Unicode-汉字编码表 阮一峰-字符编码笔记：A
 求和需要实现 Sum 函数，并对其编写测试用例。
 创建 sum.go 文件，代码如下：
 1package array 2func Sum(numbers int) int { 3 sum := 0 4 for i := 0; i &lt;= numbers; i++ { 5 sum += i 6 } 7 return sum 8} 再创建 sum_test.go 文件，代码如下：
-1package array 2 3import ( 4 "reflect" 5 "testing" 6) 7 8func TestSum(t *testing.T) { 9 t.Run("collection of any size", func(t *testing.T) { 10 num := 10 11 got := Sum(num) 12 want := 55 13 if got != want { 14 t.Errorf("got %d want %d given, %v", got, want, num) 15 } 16 }) 17} 运行测试go test -run ^TestSum$ -v，结果显示 OK 说明测试用例通过 基准/压力测试……</div><p class=readmore><a href=https://ink-kai.github.io/posts/2022/05/golearnday/>阅读全文</a></p></article><article class=post><header><h1 class=post-title><a href=https://ink-kai.github.io/posts/2022/05/websiteresources/ title=个人收藏夹中的资源>个人收藏夹中的资源</a></h1></header><date class="post-meta meta-date">2022年5月20日</date><div class=post-meta><span>|</span>
-<span class=meta-category><a href=/categories/%E8%B5%84%E6%BA%90>资源</a></span></div><div class=post-content>文档查阅 Vue.js
+1package array 2 3import ( 4 &#34;reflect&#34; 5 &#34;testing&#34; 6) 7 8func TestSum(t *testing.T) { 9 t.Run(&#34;collection of any size&#34;, func(t *testing.T) { 10 num := 10 11 got := Sum(num) 12 want := 55 13 if got != want { 14 t.Errorf(&#34;got %d want %d given, %v&#34;, got, want, num) 15 } 16 }) 17} 运行测试go test -run ^TestSum$ -v，结果显示 OK 说明测试用例通过 基准/压力测试……
+        </div>
+        <p class="readmore"><a href="https://ink-kai.github.io/posts/2022/05/golearnday/">阅读全文</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://ink-kai.github.io/posts/2022/05/websiteresources/" title="个人收藏夹中的资源">个人收藏夹中的资源</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2022年5月20日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='/categories/%E8%B5%84%E6%BA%90'>资源</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            文档查阅 Vue.js
 地鼠文档
 Vue3 文档
 OSGeo 中文分会
@@ -58,7 +242,7 @@ CDN BootCDN - Bootstrap 中文网开源项目免费 CDN 加速服务
 社区 绿叶学习网-给你初恋般的感觉~
 SegmentFault 思否
 LearnKu 终身编程者的知识社区
-娱乐&资源 Learn Touch Typing Free - TypingClub
+娱乐&amp;资源 Learn Touch Typing Free - TypingClub
 自由钢琴 AutoPiano - 最美在线钢琴应用
 优选资源 - 编程导航
 doyoudo
@@ -69,8 +253,32 @@ HD/4K/5K Resolution Wallpapers/Backgrounds ▪ Wallroom.io
 Wallpaper Abyss - 高清壁纸, 桌面背景
 未分类 Z-Library single sign on
 维基百科，自由的百科全书
-考试酷(examcoo)-永久免费的电子作业与在线考试系统云平台……</div><p class=readmore><a href=https://ink-kai.github.io/posts/2022/05/websiteresources/>阅读全文</a></p></article><article class=post><header><h1 class=post-title><a href=https://ink-kai.github.io/posts/2022/05/bloginit/ title=Hugo搭建博客>Hugo搭建博客</a></h1></header><date class="post-meta meta-date">2022年5月20日</date><div class=post-meta><span>|</span>
-<span class=meta-category><a href=/categories/%E6%97%A5%E5%B8%B8>日常</a></span></div><div class=post-content>1.下载 hugo release 下载页面
+考试酷(examcoo)-永久免费的电子作业与在线考试系统云平台……
+        </div>
+        <p class="readmore"><a href="https://ink-kai.github.io/posts/2022/05/websiteresources/">阅读全文</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://ink-kai.github.io/posts/2022/05/bloginit/" title="Hugo搭建博客">Hugo搭建博客</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2022年5月20日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='/categories/%E6%97%A5%E5%B8%B8'>日常</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            1.下载 hugo release 下载页面
 可选 32 或 64 下载 压缩包解压后，将 hugo.exe 所在目录添加到环境变量 PATH中 cmd 终端中执行hugo version，出现版本号即安装成功 2.BlogSite 当前目录建立 Blog 目录
 hugo new site Blog 为 Blog 添加主题(个人使用 maupassant 主题)
 官方主题 进入 Blog 目录
@@ -79,19 +287,157 @@ hugo new posts/home.md 启动 Blog 站点
 hugo server 3.github + picgo （图床配置） 本人使用 vscode 开发 markdown，图片粘贴上传很不方便，因此使用 github+picgo 作为图片存储
 github 新建 public 仓库 xxx 生成 Token 地址
 vscdoe 安装 picgo 插件 4.使用 picgo 上传图片 win 电脑在 vscode 界面下有两个快捷键（大小写不敏感）
-Ctrl+Alt+u 上传剪贴板图片并在光标处粘贴图片链接 Ctrl+Alt+e 打开资源管理器选择图片上传 ……</div><p class=readmore><a href=https://ink-kai.github.io/posts/2022/05/bloginit/>阅读全文</a></p></article></div><footer id=footer><div>&copy; 2022
-<a href=https://ink-kai.github.io/>InkCat博客 By InkCat</a></div><br><div><div class=github-badge><a href=https://gohugo.io/ target=_black rel=nofollow><span class=badge-subject>Powered by</span>
-<span class="badge-value bg-blue">Hugo</span></a></div><div class=github-badge><a href=https://ink-kai.github.io/ target=_black><span class=badge-subject>Design by</span>
-<span class="badge-value bg-brightgreen">InkCat</span></a></div><div class=github-badge><a href=https://github.com/flysnow-org/maupassant-hugo target=_black><span class=badge-subject>Theme</span>
-<span class="badge-value bg-yellowgreen">Maupassant</span></a></div></div></footer><a id=rocket href=#top></a>
-<script type=text/javascript src='/js/totop.js?v=0.0.0' async></script>
-<script type=text/javascript src=//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js async></script>
-<script src=/js/copy-to-clipboard.js></script>
-<script src=/js/hrefblank.js></script></div><div id=secondary><section class=widget><form id=search action=https://ink-kai.github.io/search method=get accept-charset=utf-8 target=_blank _lpchecked=1><input type=text name=q maxlength=20 placeholder=Search>
-<input type=hidden name=sitesearch value=https://ink-kai.github.io/>
-<button type=submit class="submit icon-search"></button></form></section><section class=widget><h3 class=widget-title>最近文章</h3><ul class=widget-list><li><a href=https://ink-kai.github.io/posts/2022/06/11/centossystembug/ title=记-centos文件系统损坏导致部分服务无法使用>记-centos文件系统损坏导致部分服务无法使用</a></li><li><a href=https://ink-kai.github.io/posts/2022/05/ascii_unicode_and_utf8/ title=字符编码：Ascii、unicode和utf8>字符编码：Ascii、unicode和utf8</a></li><li><a href=https://ink-kai.github.io/posts/2022/05/golearnday02/ title=Go单元测试-总结>Go单元测试-总结</a></li><li><a href=https://ink-kai.github.io/posts/2022/05/golearnday/ title=Go测试Testing>Go测试Testing</a></li><li><a href=https://ink-kai.github.io/posts/2022/05/websiteresources/ title=个人收藏夹中的资源>个人收藏夹中的资源</a></li><li><a href=https://ink-kai.github.io/posts/2022/05/bloginit/ title=Hugo搭建博客>Hugo搭建博客</a></li></ul></section><section class=widget><h3 class=widget-title><a href=/categories/>分类</a></h3><ul class=widget-list><li><a href=https://ink-kai.github.io/categories/go/>go (2)</a></li><li><a href=https://ink-kai.github.io/categories/linux/>linux (1)</a></li><li><a href=https://ink-kai.github.io/categories/%E6%8A%80%E6%9C%AF/>技术 (3)</a></li><li><a href=https://ink-kai.github.io/categories/%E6%97%A5%E5%B8%B8/>日常 (1)</a></li><li><a href=https://ink-kai.github.io/categories/%E8%B5%84%E6%BA%90/>资源 (1)</a></li></ul></section><section class=widget><h3 class=widget-title><a href=/tags/>标签</a></h3><div class=tagcloud><a href=https://ink-kai.github.io/tags/centos7/>centos7</a>
-<a href=https://ink-kai.github.io/tags/chrome/>Chrome</a>
-<a href=https://ink-kai.github.io/tags/go%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/>go单元测试</a>
-<a href=https://ink-kai.github.io/tags/xfs_repair/>xfs_repair</a>
-<a href=https://ink-kai.github.io/tags/%E5%8D%9A%E5%AE%A2/>博客</a>
-<a href=https://ink-kai.github.io/tags/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/>字符编码</a></div></section><section class=widget><ul class=widget-list><li><a href=https://ink-kai.github.io/index.xml>文章 RSS</a></li></ul></section></div></div></div></div></body></html>
+Ctrl+Alt+u 上传剪贴板图片并在光标处粘贴图片链接 Ctrl+Alt+e 打开资源管理器选择图片上传 ……
+        </div>
+        <p class="readmore"><a href="https://ink-kai.github.io/posts/2022/05/bloginit/">阅读全文</a></p>
+    </article>
+    
+    
+    
+
+
+
+
+
+</div>
+
+                    <footer id="footer">
+    <div>
+        &copy; 2022
+        <a href="https://ink-kai.github.io/">InkCat博客 By InkCat</a>
+        
+    </div>
+    <br />
+    <div>
+        <div class="github-badge">
+            <a href="https://gohugo.io/" target="_black" rel="nofollow">
+                <span class="badge-subject">Powered by</span>
+                <span class="badge-value bg-blue">Hugo</span>
+            </a>
+        </div>
+        <div class="github-badge">
+            <a href="https://ink-kai.github.io/" target="_black">
+                <span class="badge-subject">Design by</span>
+                <span class="badge-value bg-brightgreen">InkCat</span>
+            </a>
+        </div>
+        <div class="github-badge">
+            <a href="https://github.com/flysnow-org/maupassant-hugo" target="_black">
+                <span class="badge-subject">Theme</span>
+                <span class="badge-value bg-yellowgreen">Maupassant</span>
+            </a>
+        </div>
+    </div>
+</footer>
+
+
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+<script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+
+
+
+
+<script src='/js/copy-to-clipboard.js'></script>
+
+<script src='/js/hrefblank.js'></script>
+
+
+                </div>
+
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='https://ink-kai.github.io/search' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="https://ink-kai.github.io/">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="https://ink-kai.github.io/posts/2022/06/11/centossystembug/" title="记-centos文件系统损坏导致部分服务无法使用">记-centos文件系统损坏导致部分服务无法使用</a>
+    </li>
+    
+    <li>
+        <a href="https://ink-kai.github.io/posts/2022/05/ascii_unicode_and_utf8/" title="字符编码：Ascii、unicode和utf8">字符编码：Ascii、unicode和utf8</a>
+    </li>
+    
+    <li>
+        <a href="https://ink-kai.github.io/posts/2022/05/golearnday02/" title="Go单元测试-总结">Go单元测试-总结</a>
+    </li>
+    
+    <li>
+        <a href="https://ink-kai.github.io/posts/2022/05/golearnday/" title="Go测试Testing">Go测试Testing</a>
+    </li>
+    
+    <li>
+        <a href="https://ink-kai.github.io/posts/2022/05/websiteresources/" title="个人收藏夹中的资源">个人收藏夹中的资源</a>
+    </li>
+    
+    <li>
+        <a href="https://ink-kai.github.io/posts/2022/05/bloginit/" title="Hugo搭建博客">Hugo搭建博客</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title"><a href='/categories/'>分类</a></h3>
+<ul class="widget-list">
+    
+    <li><a href="https://ink-kai.github.io/categories/go/">go (2)</a></li>
+    
+    <li><a href="https://ink-kai.github.io/categories/linux/">linux (1)</a></li>
+    
+    <li><a href="https://ink-kai.github.io/categories/%E6%8A%80%E6%9C%AF/">技术 (3)</a></li>
+    
+    <li><a href="https://ink-kai.github.io/categories/%E6%97%A5%E5%B8%B8/">日常 (1)</a></li>
+    
+    <li><a href="https://ink-kai.github.io/categories/%E8%B5%84%E6%BA%90/">资源 (1)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title"><a href='/tags/'>标签</a></h3>
+<div class="tagcloud">
+    
+    <a href="https://ink-kai.github.io/tags/centos7/">centos7</a>
+    
+    <a href="https://ink-kai.github.io/tags/chrome/">Chrome</a>
+    
+    <a href="https://ink-kai.github.io/tags/go%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/">go单元测试</a>
+    
+    <a href="https://ink-kai.github.io/tags/xfs_repair/">xfs_repair</a>
+    
+    <a href="https://ink-kai.github.io/tags/%E5%8D%9A%E5%AE%A2/">博客</a>
+    
+    <a href="https://ink-kai.github.io/tags/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/">字符编码</a>
+    
+</div>
+    </section>
+
+    
+
+
+    <section class="widget">
+        
+        <ul class="widget-list">
+            <li><a href="https://ink-kai.github.io/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

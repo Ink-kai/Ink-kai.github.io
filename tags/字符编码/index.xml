@@ -1,4 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>字符编码 on InkCat博客</title><link>https://ink-kai.github.io/tags/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/</link><description>Recent content in 字符编码 on InkCat博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 24 May 2022 11:52:04 +0800</lastBuildDate><atom:link href="https://ink-kai.github.io/tags/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/index.xml" rel="self" type="application/rss+xml"/><item><title>字符编码：Ascii、unicode和utf8</title><link>https://ink-kai.github.io/posts/2022/05/ascii_unicode_and_utf8/</link><pubDate>Tue, 24 May 2022 11:52:04 +0800</pubDate><guid>https://ink-kai.github.io/posts/2022/05/ascii_unicode_and_utf8/</guid><description>ASCII ASCII 由电报码发展而来，是基于拉丁字母的一套电脑编码系统。 控制字符编号范围是0-31和127（0x00-0x1F和0x7F），共33个字符。（无法显示，主要是用来操控已经处理过的文字） 可显示字符编号范围是32-126（0x20-0x7E），共95个字符。（用户可见） 比如说空格space是32（二进制0010 0000）
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>字符编码 on InkCat博客</title>
+    <link>https://ink-kai.github.io/tags/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/</link>
+    <description>Recent content in 字符编码 on InkCat博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 24 May 2022 11:52:04 +0800</lastBuildDate><atom:link href="https://ink-kai.github.io/tags/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>字符编码：Ascii、unicode和utf8</title>
+      <link>https://ink-kai.github.io/posts/2022/05/ascii_unicode_and_utf8/</link>
+      <pubDate>Tue, 24 May 2022 11:52:04 +0800</pubDate>
+      
+      <guid>https://ink-kai.github.io/posts/2022/05/ascii_unicode_and_utf8/</guid>
+      <description>ASCII ASCII 由电报码发展而来，是基于拉丁字母的一套电脑编码系统。 控制字符编号范围是0-31和127（0x00-0x1F和0x7F），共33个字符。（无法显示，主要是用来操控已经处理过的文字） 可显示字符编号范围是32-126（0x20-0x7E），共95个字符。（用户可见） 比如说空格space是32（二进制0010 0000）
 局限在于只能显示26个基本拉丁字母、阿拉伯数字和英式标点符号。只能用于显示现代美国英语。解决了部分西欧语言的显示问题。
 Unicode 官方中文名称为统一码，是计算机科学领域的业界标准。它整理、编码了世界上大部分的文字系统，使得电脑可以用更为简单的方式来呈现和处理文字。 作为国际标准采纳于通用字符集，即 ISO/IEC 10646。
 比如\u4f60表示汉字你好，\u0041表示英文字母A，\u0031表示阿拉伯数字1
@@ -6,4 +21,8 @@ Unicode 官方中文名称为统一码，是计算机科学领域的业界标准
 参考链接 维基百科-ASCII
 维基百科-Unicode
 维基百科-UTF8
-Unicode-符号对应表 Unicode-汉字编码表 阮一峰-字符编码笔记：ASCII，Unicode 和 UTF-8</description></item></channel></rss>
+Unicode-符号对应表 Unicode-汉字编码表 阮一峰-字符编码笔记：ASCII，Unicode 和 UTF-8</description>
+    </item>
+    
+  </channel>
+</rss>
