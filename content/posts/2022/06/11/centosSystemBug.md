@@ -7,7 +7,7 @@ tags:
 categories: 
     -   linux
 date: '2022-06-11T11:49:46+08:00'
-draft: true
+draft: false
 # 支持在首页上隐藏某篇文章
 hiddenFromHomePage: false
 # lastmod:
